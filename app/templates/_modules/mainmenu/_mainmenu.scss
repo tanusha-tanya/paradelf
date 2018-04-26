@@ -1,0 +1,21 @@
+.mainmenu__title{
+  position:absolute;
+  left:60px;
+  top:60px;
+  transform: rotate(270deg);
+  color:$curentLink;
+  font-size:17px;
+  text-transform: uppercase;
+}
+.mainmenu__links{
+  margin-left: 120px;
+  li{
+    margin-bottom: 40px;
+    list-style:none;
+  }
+  a{
+    font: $f-big;
+    color: $regularText;
+    text-decoration:none;
+  }
+}

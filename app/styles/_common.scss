@@ -1,0 +1,33 @@
+*{
+  box-sizing:border-box;
+}
+body{
+  font-family:$ffm-reg;
+  color:$regularText;
+  font-size:$fsz-std
+}
+.container{
+  max-width:1440px;
+  padding: 30px 70px;
+  position:relative;
+  margin: 0 auto;
+}
+.row{
+  display:flex;
+  margin: 0 -30px;
+}
+.col-5{
+  margin: 30px;
+  width:calc(40% - 60px);
+}
+.col-7{
+  margin: 30px;
+  width:calc(60% - 60px);
+}
+.flex{
+  display:flex;
+}
+.angle{
+  position:absolute;
+  background:$bgColor;
+}
