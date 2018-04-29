@@ -1,0 +1,64 @@
+.header__gumburger{
+  align-self: flex-start;
+  display:flex;
+  align-items:center;
+  &>span{
+    font-family:$ffm-reg;
+    color:$regularText;
+    margin-right:10px;
+    text-transform: uppercase;
+  }
+  @media(min-width:$desctop){
+  &>span{
+    font-size: 17px;
+    margin-right:20px;
+  }
+}
+}
+.header__button{
+  width:60px;
+  height:60px;
+  border-radius:100%;
+  background: $decorateColor;
+  cursor:pointer;
+  @media(min-width:$tablet){
+    position:relative;
+  }
+  span{
+    display:block;
+    width:20px;
+    height:2px;
+    background: $simpleColor;
+    position:absolute;
+    top: 30px;
+    left: 20px;
+    &:after, &:before{
+      content: "";
+      display:block;
+      width:20px;
+      height:2px;
+      background: $simpleColor;
+      position:absolute;
+      left:0;
+    }
+    &:after{
+      top:8px;
+    }
+    &:before{
+      top:-8px;
+    }
+  }
+@media(min-width:$desctop){
+  width:70px;
+  height:70px;
+  span{
+    width:26px;
+    height:2px;
+    top: 34px;
+    left: 22px;
+    &:after, &:before{
+      width:26px;
+  }
+}
+}
+}

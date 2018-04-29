@@ -1,9 +1,8 @@
-include ../_modules/header/header
-include ../_modules/mainmenu/mainmenu
+include ../_modules/headerinner/headerinner
+include ../_modules/description/description
 include ../_modules/slider/slider
 include ../_modules/date/date
 include ../_modules/button/button
-include ../_modules/contacts/contacts
 
 doctype html
 html.no-js(lang="ru")
@@ -13,20 +12,20 @@ html.no-js(lang="ru")
     include ../_includes/svg
 
   body
-    header.header
-      +header()
-    main.container
-      .row
-        .mainmenu.col-7
-          +mainmenu()
-        .col-5
-          .slider
-            +slider()
-          .flex
-            .date
-              +date()
-            .button
-              +button()
-          .contacts
-            +contacts()
-    .angle
+    .header
+      +headerinner()
+      section.section-top.inner-top
+        .container
+          .row
+            .col-7.col-md-5
+              +description()
+              .flex.button__inner
+                +date()
+                .button
+                  +button()
+            .col-5.col-md-7
+              .right__block
+                .slider
+                  +slider()
+      block content
+    include ../_includes/scripts

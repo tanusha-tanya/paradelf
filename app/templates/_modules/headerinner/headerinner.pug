@@ -1,4 +1,4 @@
-mixin header()
+mixin headerinner()
   .container.header__wrap
     .header__logo
       img(src="assets/logo.png" alt="Парадельфийские игры")
@@ -18,4 +18,7 @@ mixin header()
       .heder__title
         .header__name Парадельфийские игры
         span Инклюзивные состязания людей с инвалидностью в области высших достижений в искусстве
-    a.header__start(href="start") Начать
+    .header__gumburger
+      span Меню
+      .header__button
+        span

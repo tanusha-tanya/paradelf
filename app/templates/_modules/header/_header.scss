@@ -1,86 +1,90 @@
+.header{
+  padding: 15px 0;
+}
 .header__logo{
   padding: 3px 4px;
+  img{
+    width: 110px;
+    @media(min-width:$middle){
+    width: auto;
+  }
 }
-.heder__middle{
-  margin: 30px 0 0 110px;
-  flex-grow: 1;
 }
+
 .heder__links{
   display:inline-block;
-  &-lang{
-    display:inline-block;
+
+  svg{
+    margin-right:10px;
   }
-  img, svg{
-    margin:0 10px;
+  img{
+    margin: 0 7px;
   }
   a{
+    display:block;
     text-decoration:none;
     color: $regularText;
     font-size: $fsz-small;
     font-family:$ffm-reg;
     line-height:$fsz-std;
+    margin-bottom:10px;
+    @media(min-width:$middle){
+    display:inline-block;
+    margin-bottom:0;
   }
+}
   span{
-    margin-right:10px;
+    margin-right:6px;
+  }
+  &-lang{
+    display:inline-block;
+    a{
+      display:inline-block;
+    }
   }
 }
  .heder__link{
-  margin-right:50px;
+     margin-right:44px;
  }
 .heder__title{
-  margin-top:60px;
+  @media(min-width:$desctop){
+    margin-top:53px;
+  }
   span{
     font-size:$fsz-std;
     font-family: $f-reg;
-  }
-}
-h1{
-  margin: 15px 0;
-  font: $h1;
-  color: $bgColor;
-}
-.header__gumburger{
-  position:absolute;
-  right:30px;
-  top:40px;
-  display:flex;
-  align-items:center;
-  &>span{
-    font-family:$ffm-reg;
-    color:$regularText;
-    font-size: 17px;
-    margin-right:20px;
-  }
-}
-.header__button{
-  position:relative;
-  width:70px;
-  height:70px;
-  border-radius:100%;
-  background: $decorateColor;
-  cursor:pointer;
-  span{
     display:block;
-    width:28px;
-    height:1px;
-    background: $simpleColor;
-    position:absolute;
-    top:34px;
-    left:20px;
-    &:after, &:before{
-      content: "";
-      display:block;
-      width:28px;
-      height:1px;
-      background: $simpleColor;
-      position:absolute;
-      left:0;
-    }
-    &:after{
-      top:7px;
-    }
-    &:before{
-      top:-7px;
+    margin-left: 3px;
+    @media(min-width:$desctop){
+      margin-top: -15px;
     }
   }
+}
+.header__name{
+  margin: 15px 0;
+  color: $bgColor;
+  font-size:30px;
+  @media(min-width:$desctop){
+  font: $h1;
+}
+}
+.header__start{
+  font: 17px/24px "gothamproMedium", Arial, Verdana, sans-serif;
+  margin-right: 12px;
+  margin-bottom: 5px;
+  text-decoration:none;
+  color: #262626;
+  position:absolute;
+  top:15px;
+  right:15px;
+  @media(min-width:$tablet){
+    position:static;
+  }
+}
+
+.header__wrap{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+
 }

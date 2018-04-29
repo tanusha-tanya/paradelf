@@ -1,0 +1,27 @@
+.contacts{
+  background: $bgColor;
+  padding:  20px 15px;
+  margin: 0 -15px;
+  display: flex;
+ flex-wrap: wrap;
+  @media(min-width:$tablet){
+    background: none;
+    position: absolute;
+    right: 70px;
+    margin: 0;
+    padding:0;
+    bottom:0;
+  }
+  a{
+  color: $simpleColor;
+  font-size: 14px;
+  font-family:$f-reg;
+  text-decoration: none;
+  }
+}
+.contacts__link{
+  margin:10px 20px;
+  @media(min-width:$desctop){
+  margin:0 0 0 40px;
+}
+}

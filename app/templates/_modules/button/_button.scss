@@ -1,0 +1,20 @@
+.button{
+  align-self: flex-end;
+  position: relative;
+}
+button{
+  font:$f-button;
+  color: $simpleColor;
+  background: $decorateColor;
+  border:none;
+  padding: 17px 25px;
+  @media(min-width:$desctop){
+    margin-right: 12px;
+    margin-bottom: 5px;
+  }
+}
+.button__inner{
+  .date{
+    margin: 0 30px;
+  }
+}

@@ -1,0 +1,29 @@
+.date{
+  font-family: $ffm-reg;
+  font-size: 36px;
+  color:$simpleColor;
+  margin-right:15px;
+  span{
+    font-size: $fsz-small;
+  }
+  position: relative;
+  margin: 20px auto;
+  @media(min-width:$tablet){
+    margin: 0;
+  }
+}
+.date__title{
+  font-size: $fsz-small;
+  margin-bottom:10px;
+}
+.date__time{
+  display: inline-block;
+  vertical-align: top;
+  span{
+    display:block;
+    font-family:$f-reg;
+  }
+  time{
+    margin-right: 7px;
+  }
+}

@@ -1,0 +1,15 @@
+.tab__list{
+  display:flex;
+  margin-left:60px;
+  font-family: $ffm-reg;
+  font-size: 20px;
+}
+.tab__link{
+  list-style: none;
+  margin-left:60px;
+  color:  $regularText;
+  font-family: $ffm-reg;
+}
+.tab__link.tab__current{
+  color:  $decorateColor;
+}
