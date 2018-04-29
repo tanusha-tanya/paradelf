@@ -91,9 +91,9 @@ var currentHour = floorhour - floorDay * 24;
 var currentmin = floormin - floorhour * 60;
 (currentmin >= 10)?document.getElementById('minuts').innerHTML = currentmin :document.getElementById('minuts').innerHTML = "0" + currentmin;
 
-var day = currentDay.toString().split(""),
-    hour = currentHour.toString().split(""),
-    minuts = currentmin.toString().split(""),
+var day = document.getElementById('day').toString().split(""),
+    hour = document.getElementById('hour').innerHTML.toString().split(""),
+    minuts = document.getElementById('minuts').innerHTML.toString().split(""),
     dayLast = day.length - 1;
     hourLast = hour.length - 1;
     minutsLast = minuts.length - 1;

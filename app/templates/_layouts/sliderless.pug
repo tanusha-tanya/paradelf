@@ -1,0 +1,12 @@
+include ../_modules/header/header
+doctype html
+html.no-js(lang="ru")
+  head
+    include ../_includes/meta
+    include ../_includes/styles
+    include ../_includes/svg
+
+  body
+    .header
+      +header()
+    block content
