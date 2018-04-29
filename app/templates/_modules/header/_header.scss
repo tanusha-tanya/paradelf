@@ -31,6 +31,7 @@
     @media(min-width:$middle){
     display:inline-block;
     margin-bottom:0;
+    border: none;
   }
 }
   span{
@@ -77,6 +78,9 @@
   position:absolute;
   top:15px;
   right:15px;
+  &:hover, &:active{
+    border:none;
+  }
   @media(min-width:$tablet){
     position:static;
   }

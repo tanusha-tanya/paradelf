@@ -5,7 +5,18 @@ body{
   font-family:$ffm-reg;
   color:$regularText;
   font-size:$fsz-std;
+  max-width: 2200px;
+  position:relative;
+  margin:0 auto;
 }
+a{
+  text-decoration:none;
+  color:$regularText;
+  &:hover, &:active{
+    border-bottom: 1px solid $regularText;
+  }
+}
+
 .topwrapper{
   min-height: 100vh;
   display: flex;
@@ -84,9 +95,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4849D7', end
   @media(min-width:$tablet){
     margin:20px auto;
   }
-  @media(min-width:$desctop){
-    margin-left: -30px;
-  }
 }
 .bg{
   background:$bgColor;
@@ -121,4 +129,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4849D7', end
 .slider__wrap{
   margin-bottom: 0;
 }
+}
+.content{
+  .h1{
+    font-family:$ffm-bold;
+    margin: 40px 0;
+    font-size: 84px;
+  }
+  P{
+    font-family: $f-reg;
+    font-size: 18px;
+    line-height: 35px;
+  }
 }

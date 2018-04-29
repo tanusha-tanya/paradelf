@@ -7,10 +7,97 @@ mixin tabs()
         li.tab__link Номинации
         li.tab__link Программа
         li.tab__link Результаты
-    .container
-      .tab__items#tabsItem
-        .tab__item
-        .tab__item
-        .tab__item
-        .tab__item
-        .tab__item
+    .tab__items#tabsItem
+      .tab__item.container
+        .tab__colum-left Положение
+        .tab__colum-right
+          .content
+            .h1 Положение
+      .tab__item.container
+        .tab__colum-left
+          .tab__ancors
+            .tab__ancor
+              figure
+                svg(role='img', width='116', height='118')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#win')
+                figcaption 29 номинаций в 8-ми видах искусств
+            .tab__ancor
+              figure
+                svg(role='img', width='126', height='106')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#udmgirl')
+                figcaption Более 1500 участников
+            .tab__ancor
+              figure
+                svg(role='img', width='128', height='90')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#russia')
+                figcaption Более 50 субъекта России
+            .tab__ancor
+              figure
+                svg(role='img', width='125', height='108')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#globous')
+                figcaption 16 стран мира
+        .tab__colum-right
+          .content
+            .h1 Об играх
+              p Вторые Международные Парадельфийские игры — инклюзивные состязания людей с инвалидностью в области высших достижений в искусстве — состоятся с 11 по 17 ноября 2018 года в городе Ижевске Удмуртской Республики.
+              .video__wrap
+                .video__inner
+                  iframe(width="560" height="315" src="https://www.youtube.com/embed/iW2dgIzON5Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+              p Игры проводятся Национальным Парадельфийским комитетом России и Правительством Удмуртской Республики. Игры поддерживаются как системное мероприятие Фондом президентских грантов, Министерством культуры Российской Федерации, депутатами Государственной Думы ФС РФ и общественными организациями инвалидов России и мира.
+              p Игры пройдут с использованием гранта Президента Российской Федерации на развитие гражданского общества, предоставленного Фондом президентских грантов.
+              p Парадельфийские игры вызывают живой интерес не только в нашей стране, но и за рубежом. Представители инклюзивного творческого международного сообщества уже заявили о желание принять участие в Играх. Ожидаемое количество российских и зарубежных участников составит 1500-2000 человек.
+              p Творческие состязания пройдут по 29-ти номинациям в 8-ми видах искусств: музыкальное, изобразительное, аудиовизуальное, театральное, хореографическое и цирковое искусство; литература (авторство) и жестовая песня.
+              p Во время Игр предусмотрены масштабные церемонии открытия и закрытия Игр, гала-концерт лауреатов с участием звезд эстрады и видных деятелей культуры, деловая программа, семинары, мастер-классы, международная конференция, музыкальные гостиные, экскурсионные программы, знакомство с творчеством П. И. Чайковского, представление национальной культуры народов России и других стран.
+              p В большинстве субъектов РФ при поддержке местных властей пройдут отборочные туры регионального этапа (до 15 мая 2018 г.) среди людей с инвалидностью и инклюзивных коллективов — победителей региональных всероссийских и международных конкурсов и фестивалей, а также формирование сборных команд для участия в финале Игр.
+              p В непростой период развития международного олимпийского и паралимпийского движения Россия выступает инициатором нового международного проекта, способного объединить такой разный современный мир. Наша страна готова к совместному созиданию без политических акцентов и разногласий и открывает инклюзивную площадку для всех людей и всех стран мира без каких-либо ограничений.
+      .tab__item.container
+        .tab__colum-left
+          .tab__ancors
+            .tab__ancor
+              a(href="#" data-target="#music") Музыкальное искусство
+            .tab__ancor
+              a(href="#" data-target="#art") Изобразительное искусство
+            .tab__ancor
+              a(href="#" data-target="#audio") Аудио-визуальное искусство
+            .tab__ancor
+              a(href="#" data-target="#theatr") Театральное искусство
+            .tab__ancor
+              a(href="#" data-target="#poetry") Литература (поэзия, проза)
+            .tab__ancor
+              a(href="#" data-target="#songs") Жестовая песня
+            .tab__ancor
+              a(href="#" data-target="#danse") Хореографическое искусство
+            .tab__ancor
+              a(href="#" data-target="#circus") Цирковое искусство
+        .tab__colum-right
+            .content
+              .h1 Номинации
+              .nominations
+                .nomination#music
+                  .nomination__about
+                    .nomination__pick
+                      svg(role='img', width='160', height='160')
+                        use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon3')
+                    .nomination__text
+                      .nomination__title Музыкальное искусство
+                      .nomination__description Участвуют все категории инвалидов вместе. Продолжительность выступления не более 7 минут.
+                  .nomination__jury
+                    .jury__text
+                      span Руководитель рабочей группы жюри по номинации:
+                      .jury__name Евгения Владимировна Копысова
+                      p Заслуженный деятель искусств Удмуртской Республики, член союза композиторов Российской Федерации
+                .nomination#art
+                .nomination#audio
+                .nomination#theatr
+                .nomination#poetry
+                .nomination#songs
+                .nomination#danse
+                .nomination#circus
+      .tab__item.container
+        .tab__colum-left лево
+        .tab__colum-right
+          .content право
+      .tab__item.container
+        .tab__colum-left лево
+        .tab__colum-right
+          .content право

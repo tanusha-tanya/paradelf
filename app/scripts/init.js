@@ -61,15 +61,15 @@ right.addEventListener("click", function() {
     changeCounter();
   }
 });
-/*var sTime
-	$.ajax({
-	url: "/time.php",
-	cache: false,
-  success: function(data){
-  sTime = data;
-  console.log(sTime);
+
+/*var myDate = new XMLHttpRequest();
+request.onreadystatechange = fanction(){
+  if(request.readyState == 4 && request.status == 200){
+    sTime = request.responseText
   }
-});*/
+}
+request.open('GET', '/time.php');
+request.send();*/
 
 function setDate(){
 var sTime = new Date();//поменять на время на сервере

@@ -36,6 +36,7 @@
   a{
     color: $regularText;
     text-decoration:none;
+    border: none;
       @media(min-width:$tablet){
         font: $f-big;
       }

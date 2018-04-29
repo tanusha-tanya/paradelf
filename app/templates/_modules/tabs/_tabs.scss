@@ -9,7 +9,86 @@
   margin-left:60px;
   color:  $regularText;
   font-family: $ffm-reg;
+  cursor: pointer;
 }
 .tab__link.tab__current{
   color:  $decorateColor;
+}
+.tab__items{
+  display:flex;
+  background: $bgDecorate; /* Old browsers */
+  background: -moz-linear-gradient(left, $bgDecorate 0%, $bgDecorate 39%, $simpleColor 39%, $simpleColor 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, $bgDecorate 0%, $bgDecorate 39%, $simpleColor 39%, $simpleColor 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, $bgDecorate 0%, $bgDecorate 39%, $simpleColor 39%, $simpleColor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bgDecorate', endColorstr='$simpleColor',GradientType=1 ); /* IE6-9 */
+}
+.tab__item{
+  display:none;
+  opacity:0;
+  transition: opacity .3s;
+}
+.tab__item.tab__item-current{
+  display:block;
+  opacity:1;
+  display:flex;
+  width:100%;
+}
+.tab__colum-right{
+  background: $simpleColor;
+  width:100%;
+  margin: -30px;
+  width: calc(75% - 30px);
+  padding: 90px 120px;
+}
+.tab__colum-left{
+  background: $bgDecorate;
+  margin: -30px 15px 0 30px;
+  width: calc(25% - 30px);
+  padding: 90px 48px 0 0;
+}
+.tab__ancors{
+  display:flex;
+  flex-direction:column;
+  position:relative;
+}
+.tab__ancor{
+  text-align: center;
+  line-height:30px;
+  margin: 20px auto;
+  svg, figcaption{
+    display: block;
+    position:relative;
+    margin: 20px auto;
+  }
+}
+.nomination__about{
+  display: flex;
+}
+.nomination__pick{
+  margin-right: 40px;
+}
+
+.nomination__title{
+  font-family:$ffm-reg;
+  font-size: 40px;
+  line-height: 59px;
+  text-decoration:underline;
+  max-width:500px;
+}
+.nomination__description{
+  font-family: $f-reg;
+  font-size: 18px;
+  line-height: 35px;
+  margin: 17px 0;
+}
+.nomination__jury{
+  background: url("/images/decor_bg.png");
+  background-position: left center;
+}
+.jury__text{
+  padding: 16px  0  16px 81px;
+  position: relative;
+  background: $notImportantBg;
+  background-position: left center;
+  background-repeat:no-repeat;
 }
