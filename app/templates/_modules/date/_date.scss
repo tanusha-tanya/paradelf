@@ -12,6 +12,10 @@
     margin: 0;
   }
 }
+.date__timer{
+  display:flex;
+  justify-content: center;
+}
 .date__title{
   font-size: $fsz-small;
   margin-bottom:10px;

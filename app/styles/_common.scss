@@ -21,26 +21,15 @@ a{
 }
 
 .topwrapper{
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /*font-family:$ffm-reg;
-  color:$regularText;
-  font-size:$fsz-std;
-  background: $simpleColor url('/images/rectangle.svg');
-  background-repeat:no-repeat;
-  @media(min-width:$desctop){
-
-  min-height: 100vh;
-  background-position: 440px bottom;
-  background-size: contain;
-}*/
 @media(min-width:$tablet){
 background: #4849D7;
-background: -moz-linear-gradient(-60deg, #ffffff 0%, #ffffff 59%, #4849D7 59%, #4849D7 100%);
-background: -webkit-linear-gradient(-60deg, #ffffff 0%,#ffffff 59%,#4849D7 59%,#4849D7 100%);
-background: linear-gradient(150deg, #ffffff 0%,#ffffff 59%,#4849D7 59%,#4849D7 100%);
+background: -moz-linear-gradient(-60deg, #ffffff 0%, #ffffff 60%, #4849D7 60%, #4849D7 100%);
+background: -webkit-linear-gradient(-60deg, #ffffff 0%,#ffffff 60%,#4849D7 60%,#4849D7 100%);
+background: linear-gradient(150deg, #ffffff 0%,#ffffff 60%,#4849D7 60%,#4849D7 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4849D7', endColorstr='#4849D7',GradientType=1 );
+padding-bottom:30px;
 }
 }
 .container{
@@ -54,6 +43,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4849D7', end
   max-width:1440px;
   padding: 30px 60px;
   margin: 0 auto;
+  width:100%
 }
 }
 .row{
@@ -102,11 +92,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4849D7', end
 .bg{
   background:$bgColor;
   position:relative;
-}
-.section-top{
-@media(min-width:$desctop){
-  flex-grow: 1;
-}
 }
 .lg-show{
   display:none!important;
