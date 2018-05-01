@@ -1,25 +1,27 @@
 extends _layouts/sliderless
 block content
   .form__wrap
-    .container
-      .row
-        .form__left
+      .form__left
+        .form__content
           h1 Заявка на участие
           .form__text Во Вторых Международных Парадельфийских играх 2018 года в г. Ижевске Удмуртской Республики
           form.form__fields
             fieldset
-              label
-              input(type="password" name="password" placeholder="Введите пароль")
-              input(type="button" name="send" placeholder="Перейти к заявке")
+              label(for="password") Пароль
+              input(type="password" name="password" placeholder="Введите пароль" id="password")
+              input(type="submit" name="send" value="Перейти к заявке")
               a(href="") Получить пароль на электронную почту
-        .form__right
+      .form__right
+        .form__content
           .form__information Информация
             p По итогам отборочного тура регионального этапа стране или субъекту РФ необходимо подать сводную заявку на участие в Играх.
             p Данные для входа переданы представителям субъекта или страны, на электронную почту.
           .form__information Связаться с нами
           .form_contacts
-            a(href="tel:+79161629807") +7 (916) 162-98-07
-            a(href="mail:paradelf2018@gmail.com") paradelf2018@gmail.com
+            a(href="tel:+79161629807") 
+              nobr +7 (916) 162-98-07
+            a(href="mail:paradelf2018@gmail.com") 
+              nobr paradelf2018@gmail.com
             .form__soc
               a(href="https://vk.com/paradel18")
                 svg(role='img', width='19', height='12')
