@@ -1,0 +1,19 @@
+mixin headertransless()
+    .container.header__wrap
+        .header__logo
+            img(src="assets/logo.png" alt="Парадельфийские игры")
+        .heder__middle
+            .heder__links
+                a.heder__link(href="#")
+                    svg(role='img', width='32', height='22')
+                        use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#eye')
+                    | Версия для слабовидящиx       
+            .heder__title
+                .header__name Парадельфийские игры
+                span Инклюзивные состязания людей с инвалидностью в области высших достижений в искусстве
+        .heder__links.heder__links-lang
+            a.currentlink(href="#") Рус
+                img(src="images/rus.png" alt="")
+            span /
+            a(href="#") Eng
+                img(src="images/eng.png" alt="")

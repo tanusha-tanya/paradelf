@@ -1,9 +1,29 @@
 #formcontent
-    h1 Заявка на участие1
+    h1 Заявка на участие
     .form__text Во Вторых Международных Парадельфийских играх 2018 года в г. Ижевске Удмуртской Республики
     form.form__fields
         fieldset
-            label(for="password") Пароль
-            input(type="password" name="password" placeholder="Введите пароль" id="password")
-            input(type="submit" name="send" value="Перейти к заявке")
-            a(href="") Получить пароль на электронную почту
+            label(for="country") Ваша страна
+            input(type="text" name="country" placeholder="Вевдите название страны" id="country")
+        fieldset
+            label(for="subject") Субъект РФ
+            input(type="text" name="subject" placeholder="Введите название субъекта" id="subject")
+        fieldset
+            label(for="position") Ваша должность
+            input(type="text" name="position" placeholder="Введите должность" id="position")
+        fieldset
+            label(for="name") Ваши Ф.И.О
+            input(type="text" name="name" placeholder="Введите Ф.И.О" id="name")
+        fieldset
+            label(for="password") Контактный телефон
+            input(type="text" name="password" placeholder="+7" id="password")
+        fieldset
+            label(for="email") Электронная почта
+            input(type="text" name="email" placeholder="Введите электронную почту" id="email")
+        fieldset
+            input(type="checkbox" name="confirm" id="confirm")
+            label(for="confirm")
+                | Я согласен с 
+                a(href="") условиями пользовательского соглашения
+                | и
+                a(href="") политикой конфиденциальности
