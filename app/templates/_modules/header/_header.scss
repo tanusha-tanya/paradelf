@@ -92,3 +92,12 @@
   justify-content:space-between;
 
 }
+.heder__links.heder__links-lang{
+  border:none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  @media(min-width:$tablet){
+    position:static;
+  }
+}

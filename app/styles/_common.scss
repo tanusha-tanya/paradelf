@@ -146,6 +146,7 @@ padding-bottom:30px;
 
 .form__left{
   background:  #FCE373;
+  padding:30px;
   @media(min-width:$tablet){
   width:66%;
   padding-left: 8%;
@@ -154,6 +155,7 @@ padding-bottom:30px;
 }
 .form__right{
   background:  #4849D7;
+  padding:30px;
   @media(min-width:$tablet){
   padding-left: 40px;
   padding-right: 8%;
@@ -177,39 +179,51 @@ fieldset{
   outline:none;
   padding:0;
   margin: 20px 0;
+  &>a{
+    border-bottom: 1px solid;
+    font-size: 14px;
+    float:right;
+  }
 }
 
 .form__fields{
   max-width:100%;
   @media(min-width:$tablet){
-    max-width:416px;
+    max-width:500px;
   }
   label{
     display: block;
     font-family: $f-reg;
+    
   }
   input[type="password"], input[type="text"]{
     border:none;
-    width: 300px;
-    height: 30px;
-    margin: 20px 0;
+    width: 100%;
+    max-width:300px;
+    height: 50px;
+    margin: 10px 0;
     padding: 22px;
     @media(min-width:$tablet){
-    width: 100%;
+    width:416px;
+    max-width:416px;
     height: 64px;
+    margin: 20px 0
     }
   }
   input[type="submit"]{
   border:none;
-  width: 300px;
-  height: 30px;
-  margin: 20px 0;  
+  width: 100%;
+  max-width:300px;
+  height: 50px;
+  margin: 10px 0;  
   background: #F93877;
   box-shadow: 3px, 0px, 1px rgba(0, 0, 0, 0.4);
   color:#ffffff;
   @media(min-width:$tablet){
-    width: 100%;
+    width:416px;
+    max-width:416px;
     height: 64px;
+    margin: 20px 0;
    }
   }
 
@@ -225,11 +239,7 @@ fieldset{
     color:#7A7A7A;
     opacity: 1;
   }
-  a{
-    border-bottom: 1px solid;
-    font-size: 14px;
-    float:right;
-  }
+  
 }
 
 .form__right{
@@ -254,4 +264,44 @@ fieldset{
   line-height: 45px;
   font-family:$ffm-reg;  
 }
-  
+input[type="checkbox"]{
+  visibility:hidden;
+  position:absolute;
+  &+label{
+    position: relative;
+    padding-left:45px;
+    line-height: 35px;
+    cursor: pointer;
+    a{
+      border-bottom: 1px solid;
+    }
+    a:hover, a:focus, a:active{
+      border-bottom:none;
+    }
+  &:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:10px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    width:32px;
+    height:32px;
+  }
+ }
+ &:checked{
+   &+label{
+    &:after{
+      content: "";
+      border-bottom: 2px solid #F93877;
+      border-right: 2px solid #F93877;
+      transform: rotate(45deg);
+      width: 11px;
+      height:19px;
+      position: absolute;
+      left:10px;
+      top:10px;
+    }
+   }
+ }
+} 

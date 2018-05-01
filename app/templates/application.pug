@@ -21,9 +21,11 @@
             label(for="email") Электронная почта
             input(type="text" name="email" placeholder="Введите электронную почту" id="email")
         fieldset
+            input#getpassword(type="button" name="send" value="Получить пароль" )
+        fieldset
             input(type="checkbox" name="confirm" id="confirm")
             label(for="confirm")
                 | Я согласен с 
-                a(href="") условиями пользовательского соглашения
-                | и
+                a(href="") условиями пользовательского соглашения 
+                | и 
                 a(href="") политикой конфиденциальности

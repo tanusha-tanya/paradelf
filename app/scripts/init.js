@@ -187,6 +187,11 @@ var day = document.getElementById('day').innerHTML.toString().split(""),
                  $("#loader").fadeOut("normal");
                 }
                 return false;
-              })
+              });
+      $("#getpassword").click(function(){  
+        console.log("click");      
+        $("#formcontent").innerHTML = "Пароль отправлен вам на почту"
+        //setTimeout(window.reload(), 10000);
+      }
     })
    
