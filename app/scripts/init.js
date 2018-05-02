@@ -15,6 +15,7 @@ var toggleMenu = function(){
 button.addEventListener("click", toggleMenu);*/
 //сделать драгндроп, айтемам позишн абсолют
 document.addEventListener('DOMContentLoaded', function(){
+ 
 
   var slider = document.getElementById('slider'),
     left = document.getElementById('left'),
@@ -25,12 +26,13 @@ document.addEventListener('DOMContentLoaded', function(){
     current,
     score,
     showed = 0;
+
     (amount < 10)?all.innerHTML =  "0"+amount:all.innerHTML = amount;
+    
     var addscore = function(that){
     score = that+1;
     (score < 10)?current.innerHTML =  "0"+score:current.innerHTML = score;
   }
-
   var changeCounter = function(){
     for(var i = 0; i < amount; i++){
       current = document.getElementById('current');
@@ -170,11 +172,12 @@ var day = document.getElementById('day').innerHTML.toString().split(""),
      
       
      });
+     
 
      $(document).ready(function() {
       $(".openform").click(function(){
         
-               var info = $(this).attr("href")+ " #formcontent";
+               var info = $(this).attr("href")+ " #forminner";
                $("#formcontent").hide("fast", loadContent);
                /*$("#loader").fadeIn("normal");*/
                 
@@ -188,10 +191,9 @@ var day = document.getElementById('day').innerHTML.toString().split(""),
                 }
                 return false;
               });
-      $("#getpassword").click(function(){  
-        console.log("click");      
-        $("#formcontent").innerHTML = "Пароль отправлен вам на почту"
-        //setTimeout(window.reload(), 10000);
-      }
+        $("#formcontent").on("click", "#getpassword", function(){
+            event.preventDefault();
+            console.log("cleck");
+        });
     })
    
