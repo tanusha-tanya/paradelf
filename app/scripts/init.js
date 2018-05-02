@@ -91,17 +91,17 @@ var currentHour = floorhour - floorDay * 24;
 var currentmin = floormin - floorhour * 60;
 (currentmin >= 10)?document.getElementById('minuts').innerHTML = currentmin :document.getElementById('minuts').innerHTML = "0" + currentmin;
 
-var day = document.getElementById('day').toString().split(""),
+var day = document.getElementById('day').innerHTML.toString().split(""),
     hour = document.getElementById('hour').innerHTML.toString().split(""),
     minuts = document.getElementById('minuts').innerHTML.toString().split(""),
-    dayLast = day.length - 1;
-    hourLast = hour.length - 1;
+    dayLast = day.length - 1,
+    dayBeforelast = dayLast - 1,
+    hourLast = hour.length - 1,
     minutsLast = minuts.length - 1;
-
-    if (day[0] !== "1" && day[dayLast] === "1"){
+    if (day[dayBeforelast] !== "1" && day[dayLast] === "1"){
       document.getElementById('day').nextElementSibling.innerHTML = "день"
     }
-    else if((day[dayLast] === "2" && day[0] !== "1")|| (day[dayLast] === "3" && day[0] !== "1") || (day[dayLast] === "4" && day[0] !== "1")){
+    else if((day[dayLast] === "2" && day[dayBeforelast] !== "1")|| (day[dayLast] === "3" && day[dayBeforelast] !== "1") || (day[dayLast] === "4" && day[0] !== "1")){
       document.getElementById('day').nextElementSibling.innerHTML = "дня"
     }
     else{
@@ -167,5 +167,26 @@ var day = document.getElementById('day').toString().split(""),
               getIndex();
         })
       }
+     
+      
+     });
 
-});
+     $(document).ready(function() {
+      $(".openform").click(function(){
+        
+               var info = $(this).attr("href")+ " #formcontent";
+               $("#formcontent").hide("fast", loadContent);
+               /*$("#loader").fadeIn("normal");*/
+                
+               function loadContent(){
+                $("#formcontent").load(info, "", function(){
+                 $("#formcontent").show("normal"/*, hideLoader()*/);
+                })
+               }
+                function hideLoader(){
+                 $("#loader").fadeOut("normal");
+                }
+                return false;
+              })
+    })
+   

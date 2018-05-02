@@ -2,7 +2,7 @@ extends _layouts/sliderless
 block content
   .form__wrap
       .form__left
-        .form__content
+        .form__content#formcontent
           h1 Заявка на участие
           .form__text Во Вторых Международных Парадельфийских играх 2018 года в г. Ижевске Удмуртской Республики
           form.form__fields
@@ -10,7 +10,7 @@ block content
               label(for="password") Пароль
               input(type="password" name="password" placeholder="Введите пароль" id="password")
               input(type="submit" name="send" value="Перейти к заявке")
-              a(href="") Получить пароль на электронную почту
+              a.openform(href="application.html") Получить пароль на электронную почту
       .form__right
         .form__content
           .form__information Информация
@@ -20,7 +20,7 @@ block content
           .form_contacts
             a(href="tel:+79161629807") 
               nobr +7 (916) 162-98-07
-            a(href="mail:paradelf2018@gmail.com") 
+            a.bordered(href="mail:paradelf2018@gmail.com") 
               nobr paradelf2018@gmail.com
             .form__soc
               a(href="https://vk.com/paradel18")

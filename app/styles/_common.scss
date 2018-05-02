@@ -239,10 +239,15 @@ fieldset{
     line-height: 35px;
     color: #ffffff;
     font-family: $f-reg;
+    border-bottom:0;
   }
-  a:hover{
+  a.bordered{
     border-bottom:1px solid #ffffff;
+
+  &:hover{
+    border-bottom:none
   }
+}
 }
 .form__information{
   font-size:24px;
