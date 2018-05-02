@@ -175,6 +175,7 @@ var day = document.getElementById('day').innerHTML.toString().split(""),
      
 
      $(document).ready(function() {
+     
       $(".openform").click(function(){
         
                var info = $(this).attr("href")+ " #forminner";
@@ -191,9 +192,15 @@ var day = document.getElementById('day').innerHTML.toString().split(""),
                 }
                 return false;
               });
-        $("#formcontent").on("click", "#getpassword", function(){
+       
+        $("#formcontent").on("click", "#getpassword", function(event){
             event.preventDefault();
-            console.log("cleck");
+            $("#forminner").text("спасибо за заявку, проверьте почту");
         });
-    })
+
+        $("#orderform").on("submit", function(event){
+          window.location.pathname(request.html)
+        }); 
+        
+    });
    

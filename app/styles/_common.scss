@@ -305,3 +305,23 @@ input[type="checkbox"]{
    }
  }
 } 
+.form__flex{
+  display:flex;
+  align-items:baseline;
+  h2 {
+    margin-right:20px;
+  }
+}
+.add{
+  font-family:$f-reg;
+  font-size:16px;
+  color:#F93877;
+  &:hover, &:active{
+    border-color: #F93877;
+  }
+}
+input[type="submit"].disabled{
+  background: #F2F2F2;
+  box-shadow: 3px, 0px, 1px, rgba(0, 0, 0, 0.4);
+  color: #BDBDBD;
+}
