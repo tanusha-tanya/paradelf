@@ -29,5 +29,9 @@
   }
   time{
     margin-right: 7px;
+    margin-left:7px;
+  }
+  &:first-of-type time{
+    margin-left:0;
   }
 }

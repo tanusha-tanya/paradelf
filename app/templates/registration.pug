@@ -1,0 +1,62 @@
+extends _layouts/sliderless
+block content
+  .form__wrap
+    .form__container
+      .form__left
+        .form__content
+          .form__flex
+            h1 Регистрация
+            a.add(href="#") Выйти
+          .form__text На Вторые Международные Парадельфийские игры 2018 года в г. Ижевске Удмуртской Республики
+          form.form__fields
+            fieldset
+              label(for="country") Ваша страна
+              input(type="text" name="country" placeholder="Вевдите название страны" id="country")
+            fieldset
+              label(for="subject") Субъект РФ
+              input(type="text" name="subject" placeholder="Введите название субъекта" id="subject")
+            fieldset
+              label(for="position") Ваша должность
+              input(type="text" name="position" placeholder="Введите должность" id="position")
+            fieldset
+              label(for="name") Ваши Ф.И.О
+              input(type="text" name="name" placeholder="Введите Ф.И.О" id="name")
+            fieldset
+              label(for="phone") Контактный телефон
+              input(type="text" name="password" placeholder="+7" id="phone")
+            fieldset
+              label(for="email") Электронная почта
+              input(type="text" name="email" placeholder="Введите электронную почту" id="email")
+            fieldset
+              label(for="password") Электронная почта
+              input(type="password" name="email" placeholder="Введите электронную почту" id="password")
+            fieldset
+              label(for="second_password") Электронная почта
+              input(type="password" name="email" placeholder="Введите электронную почту" id="second_password")
+            fieldset
+              input(type="submit" name="send" value="Зарегистрироваться")
+            fieldset
+              input(type="checkbox" name="confirm" id="confirm")
+              label(for="confirm")
+                | Я согласен с
+                a(href="") условиями пользовательского соглашения
+                | и
+                a(href="") политикой конфиденциальности
+      .form__right
+        .form__content
+          .form__information Информация
+          p По итогам отборочного тура регионального этапа стране или субъекту РФ необходимо подать сводную заявку на участие в Играх.
+          p Данные для входа переданы представителям субъекта или страны, на электронную почту.
+          .form__information Связаться с нами
+          .form_contacts
+            a(href="tel:+79161629807")
+              nobr +7 (916) 162-98-07
+            a.bordered(href="mail:paradelf2018@gmail.com")
+              nobr paradelf2018@gmail.com
+            .form__soc
+              a(href="https://vk.com/paradel18")
+                svg(role='img', width='19', height='12')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#vk')
+              a(href="https://www.facebook.com/groups/224056361670273/about/")
+                svg(role='img', width='19', height='15')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#f')

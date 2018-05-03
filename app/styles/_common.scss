@@ -2,7 +2,7 @@
   box-sizing:border-box;
 }
 body{
-  font-family:$ffm-reg;
+  font-family:$f-reg;
   color:$regularText;
   font-size:$fsz-std;
   max-width: 2200px;
@@ -21,11 +21,27 @@ a{
 }
 h1{
   font-size: 30px;
+  font-family:$ffm-bold;
   @media(min-width:$desctop){
     font-size: 42px;
+    margin: 0;
   }
  }
-
+ h2{
+  font-size: 18px;
+  font-family:$ffm-reg;
+  @media(min-width:$desctop){
+    font-size: 24px;
+    margin:60px 0 20px 0;
+  }
+ }
+ul {
+  padding-left: 15px;
+  li{
+  font-size: 14px;
+  line-height: 27px;
+}
+}
 .topwrapper{
   display: flex;
   flex-direction: column;
@@ -87,11 +103,12 @@ padding-bottom:30px;
   display:flex;
 }
 }
+
 .button__counter{
   justify-content:space-between;
   position:relative;
   @media(min-width:$tablet){
-    margin:20px auto;
+    margin:50px 0 20px 0;
   }
 }
 .bg{
@@ -117,9 +134,7 @@ padding-bottom:30px;
 .inner-top{
   background: linear-gradient(145deg, #4849D7 0%, #4849D7 59%, #FCE373 59%, #FCE373 100%)
 }
-  .right__block{
-  margin-top: 50px;
-  }
+
 .slider__wrap{
   margin-bottom: 0;
 }
@@ -139,32 +154,60 @@ padding-bottom:30px;
 }
 .form__wrap{
   @media(min-width:$tablet){
-    display:flex;
-    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+50,7db9e8+100 */
+background: #FCE373; /* Old browsers */
+background: -moz-linear-gradient(left, #FCE373 0%, #FCE373 50%, #4849D7 50%, #4849D7 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #FCE373 0%,#FCE373 50%,#4849D7 50%,#4849D7 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #FCE373 0%,#FCE373 50%,#4849D7 50%,#4849D7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4849D7', endColorstr='#4849D7',GradientType=1 ); /* IE6-9 */
  }
 }
+.form__container{
+  width: 100%;
+  @media(min-width:$tablet){
+  display:flex;
+  max-width: 1440px;
+  padding: 0 60px;
+  margin: 0 auto;
 
+  }
+}
 .form__left{
   background:  #FCE373;
   padding:30px;
   @media(min-width:$tablet){
-  width:66%;
-  padding-left: 8%;
-  padding-right:40px;
+  width:calc(66% - 30px);
+  margin: 0 15px;
+  padding:0 40px;
 }
 }
 .form__right{
   background:  #4849D7;
   padding:30px;
   @media(min-width:$tablet){
-  padding-left: 40px;
-  padding-right: 8%;
-  width:34%;
+  margin: 0 15px;
+  width:calc(34% - 30px);
+  padding:0;
 }
 }
-
+.back{
+  display: flex;
+  align-items:center;
+  font-family:$ffm-reg;
+  font-size:18px;
+  svg{
+    margin-right: 5px;
+  }
+    @media(min-width:$desctop){
+      position:absolute;
+      top: -51px;
+      left:-30px;
+  }
+}
 .form__content{
+  position:relative;
   @media(min-width:$desctop){
+  max-width: 700px;
   margin-top: 120px;
   margin-bottom:40px;
   }
@@ -172,29 +215,42 @@ padding-bottom:30px;
 .form__text{
   font-size: 18px;
   max-width: 500px;
-  margin:40px 0;
+  margin:30px 0 84px 0;
+  font-family: $ffm-reg;
 }
 fieldset{
-  border:none; 
+  border:none;
   outline:none;
   padding:0;
   margin: 20px 0;
   &>a{
-    border-bottom: 1px solid;
+    text-decoration:underline;
     font-size: 14px;
-    float:right;
+    display: block;
+    @media(min-width:$desctop){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+    &:hover{
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+  @media(min-width:$desctop){
+    margin: 48px 0;
+    max-width:416px;
+    position:relative;
   }
 }
 
 .form__fields{
   max-width:100%;
-  @media(min-width:$tablet){
-    max-width:500px;
-  }
   label{
     display: block;
     font-family: $f-reg;
-    
+    @media(min-width:$desctop){
+    }
   }
   input[type="password"], input[type="text"]{
     border:none;
@@ -207,7 +263,7 @@ fieldset{
     width:416px;
     max-width:416px;
     height: 64px;
-    margin: 20px 0
+    margin: 9px 0 20px 0
     }
   }
   input[type="submit"]{
@@ -215,10 +271,11 @@ fieldset{
   width: 100%;
   max-width:300px;
   height: 50px;
-  margin: 10px 0;  
+  margin: 10px 0;
   background: #F93877;
   box-shadow: 3px, 0px, 1px rgba(0, 0, 0, 0.4);
   color:#ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   @media(min-width:$tablet){
     width:416px;
     max-width:416px;
@@ -226,7 +283,60 @@ fieldset{
     margin: 20px 0;
    }
   }
-
+  input[type="submit"].small__btn{
+    width: 100%;
+    max-width:300px;
+    height: 50px;
+    @media(min-width:$tablet){
+      max-width:304px;
+      height: 64px;
+    }
+  }
+  input[type="reset"]{
+    width: 100%;
+    max-width:300px;
+    height: 50px;
+    background: #FCE373;
+    border: 1px solid #F93877;
+    color: #F93877;
+    @media(min-width:$tablet){
+      max-width:304px;
+      height: 64px;
+    }
+  }
+  input[type="radio"]{
+    position:absolute;
+    visibility: hidden;
+    &+label{
+      position:relative;
+      padding-left:36px;
+      margin-right: 20px;
+      &:before{
+        content: '';
+        position:absolute;
+        left: 0;
+        top: -8px;
+        width:32px;
+        height:32px;
+        background: #ffffff;
+        border-radius:50%;
+      }
+    }
+  }
+  input[type="radio"]:checked{
+      &+label{
+        &:after{
+          content: '';
+          position:absolute;
+          left: 7px;
+          width:18px;
+          height:18px;
+          background: #F93877;
+          border-radius:50%;
+          top: 0;
+        }
+      }
+  }
   :-ms-input-placeholder{
     color:#7A7A7A;
     opacity: 1;
@@ -234,12 +344,12 @@ fieldset{
   ::-webkit-input-placeholder{
     color:#7A7A7A;
     opacity: 1;
-  } 
+  }
   :-moz-input-placeholder{
     color:#7A7A7A;
     opacity: 1;
   }
-  
+
 }
 
 .form__right{
@@ -252,17 +362,23 @@ fieldset{
     border-bottom:0;
   }
   a.bordered{
-    border-bottom:1px solid #ffffff;
-
+    text-decoration:underline;
   &:hover{
-    border-bottom:none
+    text-decoration:none;
   }
 }
+a{
+  margin: 10px 0;
+}
+}
+.form_contacts{
+    display:flex;
+    flex-direction:column;
 }
 .form__information{
   font-size:24px;
   line-height: 45px;
-  font-family:$ffm-reg;  
+  font-family:$ffm-reg;
 }
 input[type="checkbox"]{
   visibility:hidden;
@@ -272,6 +388,7 @@ input[type="checkbox"]{
     padding-left:45px;
     line-height: 35px;
     cursor: pointer;
+    width: 500px;
     a{
       border-bottom: 1px solid;
     }
@@ -304,14 +421,30 @@ input[type="checkbox"]{
     }
    }
  }
-} 
+}
 .form__flex{
   display:flex;
   align-items:baseline;
-  h2 {
-    margin-right:20px;
+  a {
+    margin-left:20px;
+  }
+  @media(min-width: $desctop){
+    max-width:406px;
+    justify-content: space-between;
   }
 }
+.form__flex-full, fieldset.form__flex-full{
+  display:flex;
+  align-items:baseline;
+  a {
+    margin-left:20px;
+  }
+  @media(min-width: $desctop){
+    justify-content: space-between;
+    max-width: 100%;
+  }
+}
+
 .add{
   font-family:$f-reg;
   font-size:16px;
@@ -322,6 +455,101 @@ input[type="checkbox"]{
 }
 input[type="submit"].disabled{
   background: #F2F2F2;
-  box-shadow: 3px, 0px, 1px, rgba(0, 0, 0, 0.4);
   color: #BDBDBD;
+}
+input[type="file"]{
+  position:absolute;
+  visibility:hidden;
+}
+label.file{
+  cursor:pointer;
+  border-bottom: dotted 1px;
+  display: inline;
+}
+.form__fields input.error{
+  border: #FF0000 1px solid;
+}
+.error__text{
+  color: #FF0000;
+  position:relative;
+  padding-left: 16px;
+  @media(min-width:$desctop){
+  position:absolute;
+  right: -175px;
+  top: 50px;
+}
+  &:before{
+    content: "";
+    position:absolute;
+    background: url("/images/error.svg");
+    width:14px;
+    height:16px;
+    left:0;
+    top:0;
+  }
+}
+.form__select{
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  border:none;
+  outline:none;
+  overflow:hidden;
+  margin: 9px 0 20px 0;
+  @media(min-width:$tablet){
+    max-width: 416px;
+    height: 64px;
+  }
+  select{
+    width: calc(100% + 20px);
+    max-width: 320px;
+    height: 50px;
+    cursor: pointer;
+    padding-left:20px;
+    position:relative;
+    top: -1px;
+    @media(min-width:$tablet){
+      max-width: 450px;
+      height: 66px;
+    }
+  }
+  &:before{
+    content:"";
+    position:absolute;
+    right:0;
+    height: 30px;
+    width:35px;
+    background:#ffffff;
+    @media(min-width:$tablet){
+      height: 64px;
+    }
+  }
+  &:after{
+    content:"";
+    position:absolute;
+    right:5px;
+    top:26px;
+    border: 8px solid transparent;
+    border-top:8px solid #F93877;
+  }
+}
+.form__select.error{
+  border: #FF0000 1px solid;
+}
+.form__fields textarea{
+  width: 100%;
+  max-width: 300px;
+  height: 120px;
+  border:none;
+  outline:none;
+  margin: 9px 0 20px 0;
+  padding:20px;
+  @media(min-width:$tablet){
+    max-width: 416px;
+    height: 120px;
+  }
+}
+.form__radio{
+  margin: 20px 0;
 }

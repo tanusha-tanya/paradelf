@@ -1,0 +1,135 @@
+extends _layouts/sliderless
+block content
+  .form__wrap
+    .form__container
+      .form__left
+        .form__content
+          .back
+            svg(role='img', width='32', height='14')
+              use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#back')
+              span Вернуться без сохранения
+          .form__flex-full
+            h1 Данные участников
+            a.add(href="#") Добавить участника
+          form.form__fields
+            .form__flex
+              h2 Первый участник
+              a.add(href="#") удалить
+            fieldset
+              label(for="name") Ф.И.О участника
+              input.error(type="text" name="name" placeholder="Введите Ф.И.О" id="name")
+              span.error__text Заполните данные
+            fieldset
+              label(for="phone") Контактный телефон
+              input(type="text" name="phone" placeholder="Введите телефон" id="phone")
+            fieldset
+              label(for="date") дата рождения
+              input(type="text" name="date" placeholder="день, месяц, год" id="date")
+            fieldset
+              label Комментарий
+              textarea(name="comment"  id="comment")
+            .form__flex-full
+              h2 Первая номинация участника
+              a.add(href="#") удалить
+            fieldset.form__flex-full
+              .form__radio
+                input(type="radio" id="group" name="quantity")
+                label(for="group") Коллектив
+              .form__radio
+                input(type="radio" id="individual" name="quantity")
+                label(for="individual") Индивидуальный исполнитель
+            fieldset
+              label Вид искусства
+              .form__select
+                select
+                  option(disabled) Выберите группу
+                  option  Аудио-визуальное искусство
+                  option
+                  option
+                  option
+            fieldset
+              label Номинация
+              .form__select
+                select
+                  option(disabled) Выберите группу
+                  option  Аудио-визуальное искусство
+                  option
+                  option
+                  option 
+            fieldset
+              label Комментарий
+              textarea(name="comment"  id="comment")
+            .form__flex-full
+              h2 Первая номинация участника
+              a.add(href="#") удалить
+            fieldset.form__flex
+              .form__radio
+                input(type="radio" id="group" name="quantity")
+                label(for="group") Коллектив
+              .form__radio
+                input(type="radio" id="individual" name="quantity")
+                label(for="individual") Индивидуальный исполнитель
+            fieldset
+              label Вид искусства
+              .form__select
+                select
+                  option(disabled) Выберите группу
+                  option  аудио-визуальное
+                  option III группа
+                  option II группа
+                  option I группа
+            fieldset
+              label Номинация
+              .form__select
+                select
+                  option(disabled) Выберите группу
+                  option  документальное, художественное
+                  option III группа
+                  option II группа
+                  option I группа
+            fieldset
+              label Название коллектива
+              input(type="text" name="title" placeholder="введите название коллектива")
+            fieldset
+              label Организация
+              input(type="text" name="organisation" placeholder="введите название организации")
+            fieldset
+              label Роль участника
+              .form__select
+                select
+                  option(disabled) Выберите инструмент
+                  option  документальное, художественное
+                  option III группа
+                  option II группа
+                  option I группа
+            fieldset
+              label Конкурсный репертуар №1
+              textarea(name="comment"  id="comment" placeholder="Введите название и тему выступления")
+            fieldset
+              label Конкурсный репертуар №2
+              textarea(name="comment"  id="comment" placeholder="Введите название и тему выступления")
+            fieldset
+              label Конкурсный репертуар №3
+              textarea(name="comment"  id="comment" placeholder="Введите название и тему выступления")
+
+            fieldset
+              input.small__btn(type="submit" name="send" value="Сохранить")
+              input.small__btn(type="reset" name="reset" value="Отменить")
+      .form__right
+        .form__content
+          .form__information Информация
+            p По итогам отборочного тура регионального этапа стране или субъекту РФ необходимо подать сводную заявку на участие в Играх.
+            p Данные для входа переданы представителям субъекта или страны, на электронную почту.
+          .form__information Связаться с нами
+          .form_contacts
+            a(href="tel:+79161629807")
+              nobr +7 (916) 162-98-07
+            a.bordered(href="mail:paradelf2018@gmail.com")
+              nobr paradelf2018@gmail.com
+            .form__soc
+              a(href="https://vk.com/paradel18")
+                svg(role='img', width='19', height='12')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#vk')
+              a(href="https://www.facebook.com/groups/224056361670273/about/")
+                svg(role='img', width='19', height='15')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#f')

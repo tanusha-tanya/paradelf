@@ -1,16 +1,24 @@
 extends _layouts/sliderless
 block content
   .form__wrap
+    .form__container
       .form__left
-        .form__content#formcontent
-          h1 Заявка на участие
-          .form__text Во Вторых Международных Парадельфийских играх 2018 года в г. Ижевске Удмуртской Республики
-          form.form__fields#orderform
+        .form__content
+          .form__flex
+            h1 Войти
+            a.add(href="#") Зарегистрироваться
+          .form__text Чтобы заполнить заявку на Вторые Международные Парадельфийские игры 2018 года в г. Ижевске Удмуртской Республики
+          form.form__fields
+            fieldset
+              label(for="password") Элекстронная почта
+              input(type="text" name="email" placeholder="Введите элекстронную почту" id="email")
             fieldset
               label(for="password") Пароль
-              input(type="password" name="password" placeholder="Введите пароль" id="password")
+              input.error(type="password" name="password" placeholder="Введите пароль" id="password")
+              span.error__text Заполните данные
+              a.openform(href="application.html") Забыли пароль?
+            fieldset
               input(type="submit" name="send" value="Перейти к заявке")
-              a.openform(href="application.html") Получить пароль на электронную почту
       .form__right
         .form__content
           .form__information Информация
@@ -18,14 +26,14 @@ block content
             p Данные для входа переданы представителям субъекта или страны, на электронную почту.
           .form__information Связаться с нами
           .form_contacts
-            a(href="tel:+79161629807") 
+            a(href="tel:+79161629807")
               nobr +7 (916) 162-98-07
-            a.bordered(href="mail:paradelf2018@gmail.com") 
+            a.bordered(href="mail:paradelf2018@gmail.com")
               nobr paradelf2018@gmail.com
             .form__soc
               a(href="https://vk.com/paradel18")
                 svg(role='img', width='19', height='12')
                   use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#vk')
               a(href="https://www.facebook.com/groups/224056361670273/about/")
-                svg(role='img', width='19', height='12')
+                svg(role='img', width='19', height='15')
                   use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#f')

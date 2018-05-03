@@ -1,0 +1,61 @@
+extends _layouts/sliderless
+block content
+  .form__wrap
+    .form__container
+      .form__left
+        .form__content
+          .back
+            svg(role='img', width='32', height='14')
+              use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#back')
+              span Вернуться без сохранения
+          .form__flex-full
+            h1 Члены делегации
+            a.add(href="#") Добавить члена делегации
+          form.form__fields
+            fieldset
+              label(for="name") Ваши Ф.И.О
+              input.error(type="text" name="name" placeholder="Введите Ф.И.О" id="name")
+              span.error__text Заполните данные
+            fieldset
+              label(for="phone") Контактный телефон
+              input(type="text" name="phone" placeholder="Введите телефон" id="phone")
+            fieldset
+              label(for="email") Электронная почта
+              input(type="text" name="email" placeholder="Введите электронную почту" id="email")
+            fieldset
+              label(for="password") Адрес и место жительства участника (как в паспорте)
+              input(type="text" name="address" placeholder="Город, улица, дом, квартира" id="password")
+            fieldset
+              label Роль члена делегации
+              .form__select
+                select
+                  option(disabled) выберите роль
+                  option Ответственное лицо
+                  option Ответственное лицо
+                  option Ответственное лицо
+            fieldset
+              label Тема доклада
+              input(type="text" name="password" placeholder="Введите название доклада" id="name")
+              label.file(for="file") Прикрепить файл доклада (в формате Doc)
+              input(type="file" id="file" name="file")
+            fieldset.form__flex-full
+              input.small__btn(type="submit" name="send" value="Сохранить")
+              input.small__btn(type="reset" name="reset" value="отменить")
+      .form__right
+        .form__content
+          .form__information Информация
+            p По итогам отборочного тура регионального этапа стране или субъекту РФ необходимо подать сводную заявку на участие в Играх.
+            p Данные для входа переданы представителям субъекта или страны, на электронную почту.
+          .form__information Связаться с нами
+          .form_contacts
+            a(href="tel:+79161629807")
+              nobr +7 (916) 162-98-07
+            a.bordered(href="mail:paradelf2018@gmail.com")
+              nobr paradelf2018@gmail.com
+            .form__soc
+              a(href="https://vk.com/paradel18")
+                svg(role='img', width='19', height='12')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#vk')
+              a(href="https://www.facebook.com/groups/224056361670273/about/")
+                svg(role='img', width='19', height='15')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#f')

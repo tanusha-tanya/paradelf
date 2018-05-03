@@ -1,37 +1,51 @@
 extends _layouts/sliderless
 block content
   .form__wrap
+    .form__container
       .form__left
-        .form__content#formcontent
-            h1 Заявка на участие
-            .form__text Во Вторых Международных Парадельфийских играх 2018 года в г. Ижевске Удмуртской Республики
-            form.form__fields#orderform
-                fieldset
-                    h2 Информация о стране или субъекте РФ
-                    label(for="country") Ваша страна
-                    input(type="text" name="country" placeholder="Вевдите название страны" id="country")
-                fieldset
-                    label(for="subject") Субъект РФ
-                    input(type="text" name="subject" placeholder="Введите название субъекта" id="subject")
-                .form__flex
-                    h2 Члены дилегации
-                    a(href="delegation.html").add#delegation Добавить
-                .form__flex
-                    h2 Участники игр
-                    a(href="member.html").add#member Добавить
-                fieldset
-                    input#getpassword.disabled(type="submit" name="send" value="Отправить заявку" )
-                fieldset
-                    input(type="checkbox" name="confirm" id="confirm")
-                    label(for="confirm")
-                        | Я согласен с 
-                        a(href="") условиями пользовательского соглашения 
-                        | и 
-                        a(href="") политикой конфиденциальности
+        .form__content
+          h1 Заявка на участие
+          .form__text Во Вторых Международных Парадельфийских играх 2018 года в г. Ижевске Удмуртской Республики
+          form.form__fields
+            h2 Информация о стране или субъекте РФ
+            fieldset
+              label(for="country") Ваша страна
+              input(type="text" name="country" placeholder="Вевдите название страны" id="country")
+            fieldset
+              label(for="subject") Субъект РФ
+              input(type="text" name="subject" placeholder="Введите название субъекта" id="subject")
+            h2 Количество участников с инвалидностью
+            ul
+              li Инвалиды- колясочники (передвигающиеся только на инвалидных колясках)
+              li Инвалиды-колясочники (использующие при передвижении различные опорные приспособления)
+              li Инвалиды-опорники, использующие при передвижении только опору (трость, костыли, ходунки)
+              li Инвалиды по зрению (слепые)
+              li Инвалиды по зрению (слабовидящие)
+              li Инвалиды по слуху (глухие и слабослышащие)
+              li Инвалиды вследствие психических заболеваний
+              li Иные группы инвалидности
+            fieldset
+              label(for="number") Общее количество
+              input(type="text" name="number" placeholder="Введите общее количество участников" id="number")
+            .form__flex
+              h2 Члены дилегации
+              a(href="delegation.html").add Добавить
+            .form__flex
+              h2 Участники игр
+              a(href="member.html").add Добавить
+            fieldset
+              input.disabled.small__btn(type="submit" name="send" value="Отправить заявку" )
+            fieldset
+              input(type="checkbox" name="confirm" id="confirm")
+              label(for="confirm")
+                | Я согласен с
+                a(href="") условиями пользовательского соглашения
+                | и
+                a(href="") политикой конфиденциальности
             .disclamer
-                p После отправки заявки, подтверждение о ее получении придет на на электронную почту Ответственного контактного лица, указанного в данной заявке.
-                p Окончательное решение о включении участников в финал Игр принимает Оргкомитет Игр.
-                p Решение Оргкомитета придет на электронную почту Ответственного контактного лица, указанного в данной заявке.
+              p После отправки заявки, подтверждение о ее получении придет на на электронную почту Ответственного контактного лица, указанного в данной заявке.
+              p Окончательное решение о включении участников в финал Игр принимает Оргкомитет Игр.
+              p Решение Оргкомитета придет на электронную почту Ответственного контактного лица, указанного в данной заявке.
       .form__right
         .form__content
           .form__information Информация
@@ -39,9 +53,9 @@ block content
             p Данные для входа переданы представителям субъекта или страны, на электронную почту.
           .form__information Связаться с нами
           .form_contacts
-            a(href="tel:+79161629807") 
+            a(href="tel:+79161629807")
               nobr +7 (916) 162-98-07
-            a.bordered(href="mail:paradelf2018@gmail.com") 
+            a.bordered(href="mail:paradelf2018@gmail.com")
               nobr paradelf2018@gmail.com
             .form__soc
               a(href="https://vk.com/paradel18")
