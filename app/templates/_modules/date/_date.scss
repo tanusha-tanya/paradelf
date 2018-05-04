@@ -3,6 +3,7 @@
   font-size: 36px;
   color:$simpleColor;
   margin-right:15px;
+  max-width: 277px;
   span{
     font-size: $fsz-small;
   }
@@ -10,6 +11,7 @@
   margin: 20px auto;
   @media(min-width:$tablet){
     margin: 0;
+
   }
 }
 .date__timer{

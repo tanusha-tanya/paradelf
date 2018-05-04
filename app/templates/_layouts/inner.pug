@@ -3,6 +3,9 @@ include ../_modules/description/description
 include ../_modules/slider/slider
 include ../_modules/date/date
 include ../_modules/button/button
+include ../_modules/news/news
+include ../_modules/partners/partners
+include ../_modules/footer/footer
 
 doctype html
 html.no-js(lang="ru")
@@ -14,18 +17,18 @@ html.no-js(lang="ru")
   body
     .header
       +headerinner()
-      section.section-top.inner-top
-        .container
-          .row
-            .col-7.col-md-5
-              +description()
-              .flex.button__inner
-                +date()
-                .button
-                  +button()
-            .col-5.col-md-7
-              .right__block
-                .slider
-                  +slider()
-      block content
+    section.section-top.inner-top
+      .inner__container
+        .inner__header
+          .description
+            +description()
+            .button__inner
+              +date()
+              +button()
+          .slider
+            +slider()
+    block content
+    +news()
+    +partners()
+    +footer()
     include ../_includes/scripts

@@ -55,20 +55,20 @@ block content
                   option  Аудио-визуальное искусство
                   option
                   option
-                  option 
+                  option
             fieldset
               label Комментарий
               textarea(name="comment"  id="comment")
             .form__flex-full
               h2 Первая номинация участника
               a.add(href="#") удалить
-            fieldset.form__flex
+            fieldset.form__flex-full
               .form__radio
-                input(type="radio" id="group" name="quantity")
-                label(for="group") Коллектив
+                input(type="radio" id="group1" name="quantity1")
+                label(for="group1") Коллектив
               .form__radio
-                input(type="radio" id="individual" name="quantity")
-                label(for="individual") Индивидуальный исполнитель
+                input(type="radio" id="individual1" name="quantity1")
+                label(for="individual1") Индивидуальный исполнитель
             fieldset
               label Вид искусства
               .form__select
@@ -111,8 +111,7 @@ block content
             fieldset
               label Конкурсный репертуар №3
               textarea(name="comment"  id="comment" placeholder="Введите название и тему выступления")
-
-            fieldset
+            fieldset.form__flex-full
               input.small__btn(type="submit" name="send" value="Сохранить")
               input.small__btn(type="reset" name="reset" value="Отменить")
       .form__right

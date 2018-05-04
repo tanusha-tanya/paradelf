@@ -1,20 +1,33 @@
 .button{
-  align-self: center;
   position: relative;
+  @media(min-width:$desctop){
+    margin-left: 12px;
+    margin-top: 12px;
+  }
 }
 .send{
   font:$f-button;
   color: $simpleColor;
   background: $decorateColor;
   border:none;
-  padding: 17px 25px;
-  @media(min-width:$desctop){
-    margin-right: 12px;
-    margin-bottom: 5px;
+  padding: 17px 20px;
+  display: block;
+  max-width: 277px;
+  margin: 0 auto;
+  &:hover{
+    text-decoration: none;
+    border-bottom: none;
   }
 }
 .button__inner{
-  .date{
-    margin: 0 30px;
+  .button{
+    margin: 20px auto;
   }
+  @media(min-width:$tablet){
+    display: flex;
+    .date{
+      margin-right: 30px;
+    }
+  }
+
 }

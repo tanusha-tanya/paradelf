@@ -1,0 +1,32 @@
+.openmenu__list{
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $ffm-reg;
+  padding-left:0;
+  @media(min-width:$desctop){
+  flex-wrap: nowrap;
+  }
+}
+.openmenu__link{
+  list-style: none;
+  cursor: pointer;
+  margin: 5px;
+  a{
+    color: $decorateColor;
+    font-family: $ffm-reg;
+    font-size: 20px;
+    &:hover{
+      color:  $regularText;
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+  @media(min-width:$desctop){
+  margin-right:60px;
+}
+}
+.openmenu__link.openmenu__link-current{
+  a{
+  color:  $regularText;
+}
+}

@@ -29,7 +29,7 @@ block content
               input(type="text" name="number" placeholder="Введите общее количество участников" id="number")
             .form__flex
               h2 Члены дилегации
-              a(href="delegation.html").add Добавить 
+              a(href="delegation.html").add Добавить
             .result__form
               .result__head
                 .form__flex-full
@@ -41,7 +41,19 @@ block content
                 .result__col +7 (000) 000-00-00
               .result__row
                 .result__col Электронная почта:
-                .result__col hello@gmail.com          
+                .result__col hello@gmail.com
+            .result__form
+              .result__head
+                .form__flex-full
+                  .result__name Артемий Артурович Иванов
+                  a(href="delegation.html").add редактировать
+                  span Руководитель делегации
+              .result__row
+                .result__col Телефон:
+                .result__col +7 (000) 000-00-00
+              .result__row
+                .result__col Электронная почта:
+                .result__col hello@gmail.com
             .form__flex
               h2 Участники игр
               a(href="member.html").add Добавить
@@ -55,8 +67,32 @@ block content
                 .result__col Телефон:
                 .result__col +7 (000) 000-00-00
               .result__row
-                .result__col Электронная почта:
-                .result__col hello@gmail.com
+                .result__col Адрес:
+                .result__col г. Ижевск, ул. Пушкинская д. 23, кв. 11
+              .result__row
+                .result__col Комментрарий:
+                .result__col Есть сопровождающий
+            .result__form
+              .result__head
+                .result__nomination Первая номинация
+              .result__row
+                .result__col Индивидуальный исполнитель:
+                .result__col МС Артемий
+              .result__row
+                .result__col Вид искусства:
+                .result__col Музыкальное искусство
+              .result__row
+                .result__col Номинация:
+                .result__col Музыкальный фольклор нородов России и мира
+              .result__row
+                .result__col Ссылки на портфолио
+                .result__col
+                  a.result__link(href="#") www.paradelf.com
+                  a.result__link(href="#") www.paradelf.com
+                  a.result__link(href="#") www.paradelf.com
+              .result__row
+                .result__col Конкурсный репертуар:
+                .result__col Песня «Стена» слова Танич М., музыка Укупник. А.
             fieldset
               input.disabled.small__btn(type="submit" name="send" value="Отправить заявку" )
             fieldset

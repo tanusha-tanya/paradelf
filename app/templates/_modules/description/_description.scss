@@ -2,15 +2,37 @@
   font-family: $f-button;
   color: $simpleColor;
   font-size:20px;
-  margin: 50px 77px;
-}
+  @media(min-width:$desctop){
+    position:relative;
+    width: calc(58% - 30px);
+    padding: 60px 0 60px  60px;
+  }
+  }
 .description__event{
+  font-size:30px;
+  line-height: 30px;
+  margin: 20px 0;
+  @media(min-width:$desctop){
+  margin: 0;
   font-family: $ffm-bold;
   font-size:42px;
   line-height: 79px;
-  margin: 0 20px;
+}
 }
 .description__arow{
-  float: left;
-  margin-top: 50px;
+  display: none;
+  @media(min-width:$desctop){
+    display: block;
+    position:absolute;
+    left: 0;
+  }
+}
+.description__date{
+  font-size: 20px;
+  font-family: $ffm-reg;
+  @media(min-width:$desctop){
+    position:absolute;
+    top: 0;
+    left: 0;
+  }
 }

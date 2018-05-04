@@ -23,16 +23,22 @@ block content
               input(type="text" name="name" placeholder="Введите Ф.И.О" id="name")
             fieldset
               label(for="phone") Контактный телефон
-              input(type="text" name="password" placeholder="+7" id="phone")
+              input(type="text" name="phone" placeholder="+7" id="phone")
             fieldset
               label(for="email") Электронная почта
               input(type="text" name="email" placeholder="Введите электронную почту" id="email")
             fieldset
-              label(for="password") Электронная почта
-              input(type="password" name="email" placeholder="Введите электронную почту" id="password")
+              label(for="password") Пароль
+              .form__password
+                input(type="password" name="password" placeholder="Не менее 6 символов" id="password")
+                svg.password__icon(role='img', width='26', height='19')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#show')
             fieldset
-              label(for="second_password") Электронная почта
-              input(type="password" name="email" placeholder="Введите электронную почту" id="second_password")
+              label(for="second_password") Повторите пароль
+              .form__password
+                input(type="password" name="second_password" placeholder="Не менее 6 символов" id="second_password")
+                svg.password__icon(role='img', width='26', height='19')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#hide')
             fieldset
               input(type="submit" name="send" value="Зарегистрироваться")
             fieldset

@@ -1,0 +1,13 @@
+.share__wrap{
+  @media(min-width:$desctop){
+  position:absolute;
+  bottom: 20px;
+  display: flex;
+  left: 112px;}
+}
+.share__item{
+  margin-right: 37px;
+    a{
+      font-style:$ffm-reg;
+    }
+}

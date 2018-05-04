@@ -7,7 +7,7 @@ block content
           .back
             svg(role='img', width='32', height='14')
               use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#back')
-              span Вернуться без сохранения
+            span Вернуться без сохранения
           .form__flex-full
             h1 Члены делегации
             a.add(href="#") Добавить члена делегации
@@ -23,9 +23,6 @@ block content
               label(for="email") Электронная почта
               input(type="text" name="email" placeholder="Введите электронную почту" id="email")
             fieldset
-              label(for="password") Адрес и место жительства участника (как в паспорте)
-              input(type="text" name="address" placeholder="Город, улица, дом, квартира" id="password")
-            fieldset
               label Роль члена делегации
               .form__select
                 select
@@ -35,7 +32,7 @@ block content
                   option Ответственное лицо
             fieldset
               label Тема доклада
-              input(type="text" name="password" placeholder="Введите название доклада" id="name")
+              input(type="text" name="name" placeholder="Введите название доклада" id="name")
               label.file(for="file") Прикрепить файл доклада (в формате Doc)
               input(type="file" id="file" name="file")
             fieldset.form__flex-full
