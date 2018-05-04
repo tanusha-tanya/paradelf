@@ -553,3 +553,35 @@ label.file{
 .form__radio{
   margin: 20px 0;
 }
+.result__form{
+  margin-top: 40px;
+}
+.result__head{
+  position:relative;
+  padding-bottom:40px;
+  border-bottom: 1px solid #E9CD50;
+  span{
+    position:absolute;
+    bottom: 10px;
+    font-size: 14px;
+  }
+}
+.result__name{
+  font-family: $ffm-reg;
+  font-size: 24px;
+}
+.result__row{
+  margin: 20px 0;
+  @media(min-width: $desctop){
+    display: flex;
+  }
+}
+.result__col{
+  &:first-of-type{
+    font-size:14px;
+  }
+  &:nth-of-type(2){
+    font-size: 18px;
+    font-family: $ffm-reg;
+  }
+}

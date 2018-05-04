@@ -29,10 +29,34 @@ block content
               input(type="text" name="number" placeholder="Введите общее количество участников" id="number")
             .form__flex
               h2 Члены дилегации
-              a(href="delegation.html").add Добавить
+              a(href="delegation.html").add Добавить 
+            .result__form
+              .result__head
+                .form__flex-full
+                  .result__name Артемий Артурович Иванов
+                  a(href="delegation.html").add редактировать
+                  span Руководитель делегации
+              .result__row
+                .result__col Телефон:
+                .result__col +7 (000) 000-00-00
+              .result__row
+                .result__col Электронная почта:
+                .result__col hello@gmail.com          
             .form__flex
               h2 Участники игр
               a(href="member.html").add Добавить
+            .result__form
+              .result__head
+                .form__flex-full
+                  .result__name Артемий Артурович Иванов
+                  a(href="delegation.html").add редактировать
+                  span Руководитель делегации
+              .result__row
+                .result__col Телефон:
+                .result__col +7 (000) 000-00-00
+              .result__row
+                .result__col Электронная почта:
+                .result__col hello@gmail.com
             fieldset
               input.disabled.small__btn(type="submit" name="send" value="Отправить заявку" )
             fieldset
