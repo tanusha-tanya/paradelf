@@ -1,7 +1,28 @@
+.partners__wrap{
+  width: 100%;
+  overflow:hidden;
+  margin-top: 60px;
+}
 .partners__container{
-  width:1440px;
+  width:1090px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 75px;
+}
+.partners__title{
+  margin: 40px 0;
+  font-size: 28px;
+  font-family: $ffm-reg;
 }
 .partners__carousel{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  @media(min-width:$desctop){
+  position: absolute;
+  min-width:1440px;
+  left: 0;
+}
+}
+.partners__carousel__item{
+  margin-right: 110px;
 }

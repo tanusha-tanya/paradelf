@@ -1,4 +1,7 @@
-include ../_modules/headertransless/headertransless
+include ../_modules/headerinner/headerinner
+include ../_modules/partners/partners
+include ../_modules/footer/footer
+
 doctype html
 html.no-js(lang="ru")
   head
@@ -8,6 +11,8 @@ html.no-js(lang="ru")
 
   body
     header.header
-      +headertransless()
+      +headerinner()
     block content
+    +partners()
+    +footer()
     include ../_includes/scripts

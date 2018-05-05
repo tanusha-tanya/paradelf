@@ -1,0 +1,35 @@
+extends _layouts/detailnomination
+include _modules/share/share
+block content
+  section.section-top.inner-top
+    .detailnom__header
+      .detailnom__left
+        .detailnom__back
+          a(href="nomination.html") Назад к номинациям
+        .detailnom__descript
+          h1.detailnom__title Музыкальное искусство
+          .detailnom__text Участвуют все категории инвалидов вместе. Продолжительность выступления не более 7 минут.
+      .detailnom__right
+        svg(role='img', width='305', height='265')
+          use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon3')
+        .detailnom__card
+          .jury__text
+            span Руководитель рабочей группы жюри по номинации:
+            .jury__name Евгения Владимировна Копысова
+            p Заслуженный деятель искусств Удмуртской Республики, член союза композиторов Российской Федерации
+  .about__wrap
+    .about__container
+      .about__left
+        .about__ancors
+          .about__ancor
+            a(href="#music") Номинации
+          .about__ancor
+            a(href="#art") Члены рабочей группы
+          .about__ancor
+            a(href="#audio") Следующая номинация
+      .about__right
+        h1 Результаты
+        .content
+        .block__blue
+          .h2 Члены рабочей группы
+        +share()

@@ -3,8 +3,10 @@ mixin news()
     .container-small
       .news__head
         .h1 Новости
-        svg(role='img', width='192', height='14')
-          use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#arrow_news')
+        a.news__detail__link(href="news.html")
+          span Подробнее
+          svg(role='img', width='185', height='14')
+            use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#arrow_news')
       .news__row
         .news__item
           .news__img
