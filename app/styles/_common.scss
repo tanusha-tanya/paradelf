@@ -1058,13 +1058,27 @@ label.file{
     margin-left: 350px;
   }
 }
+.member__block-full{
+  margin-bottom: 30px;
+  position: relative;
+  display:flex;
+}
+.member__pick-full{
+    &:after{
+      content: "";
+      background: #FCE373;
+      width: 88px;
+      height: 64px;
+      position: absolute;
+    }
+}
+
 .member__pick{
   position: absolute;
   top: 8px;
   left: 0px;
   img, svg{
     position: relative;
-    max-height: 64px;
     z-index: 10;
   }
   &:after{
@@ -1074,6 +1088,7 @@ label.file{
     height: 64px;
     position: absolute;
     left: 20px;
+    top: 0;
     z-index:1;
   }
 }
@@ -1088,6 +1103,8 @@ label.file{
 }
 .member__text{
   margin-left:30px;
+  position:relative;
+  z-index: 20;
 }
 .banner__wrap{
   background: linear-gradient(to left, #FCE373 0%, #FCE373 50%, #4849D7 50%, #4849D7 100%);
@@ -1136,5 +1153,41 @@ label.file{
   display: block;
   span{
     display: block;
+  }
+}
+.commitet__header{
+  max-width: 1440px;
+  position:relative;
+  margin: 0 auto;
+  display: flex;
+}
+.commitet__left{
+  width: 75%;
+  background: #4849D7;
+  padding-top:120px;
+  padding-bottom:120px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.commitet__right{
+  width: 25%;
+  background: #FCE373;
+  text-align:center;
+  padding-top:120px;
+  padding-bottom:120px;
+}
+h1.commitet__h1{
+  font-size: 84px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.commitet__contacts{
+  p{
+  font-size: 24px;
+  font-family: $ffm-reg;
+}
+  a{
+    display:block;
+    margin: 27px 0;
   }
 }
