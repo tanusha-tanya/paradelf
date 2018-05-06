@@ -669,9 +669,7 @@ label.file{
   padding: 15px;
   @media(min-width:$desctop){
     width: 75%;
-    padding-top: 100px;
-    padding-left: 106px;
-    padding-bottom: 40px;
+    padding: 100px 0  0 106px;
   }
 }
 .about__ancors{
@@ -990,4 +988,153 @@ label.file{
   padding-top: 113px;
   padding-bottom: 113px;
   padding-left: 106px;
+}
+.detailnom__h2{
+  font-size: 40px;
+  font-family: $ffm-reg;
+  margin:0;
+}
+.detailnom__section{
+  margin: 40px 0 40px 50px;
+  p{
+    margin: 5px 0;
+  }
+}
+.detailnom__list{
+  font-family: $ffm-reg;
+  line-height: 45px;
+  font-size: 24px;
+  position: relative;
+  span{
+    text-decoration: underline;
+  }
+  &:before{
+    content: attr(data-number);
+      margin-left: -50px;
+      margin-right: 20px;
+  }
+}
+.detailnom__strong{
+  line-height: 38px;
+  font-size: 20px;
+  font-family: $ffm-reg;
+  margin: 22px 0;
+}
+.detailnom__strong{
+  font-family: $ffm-reg;
+  line-height: 38px;
+  font-size: 20px;
+}
+.detailnom__name{
+  font-family: $ffm-reg;
+  font-weight: normal;
+  line-height: 38px;
+  font-size: 18px;
+}
+.detailnom__ol{
+  padding-left: 20px;
+}
+.detailnom__li{
+  line-height: 35px;
+  font-size: 18px;
+}
+.detailnom__ul{
+  &>.detailnom__li{
+    margin-bottom: 54px;
+  }
+}
+.member__wrap{
+  margin-top: 57px;
+}
+.member__block{
+  margin-bottom: 30px;
+  max-width: 450px;
+  position: relative;
+  padding: 30px;
+  &:nth-of-type(odd){
+    margin-right: 350px;
+  }
+  &:nth-of-type(even){
+    margin-left: 350px;
+  }
+}
+.member__pick{
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  img, svg{
+    position: relative;
+    max-height: 64px;
+    z-index: 10;
+  }
+  &:after{
+    content: "";
+    background: #FCE373;
+    width: 88px;
+    height: 64px;
+    position: absolute;
+    left: 20px;
+    z-index:1;
+  }
+}
+.member__title{
+  font-size: 24px;
+  font-family: $ffm-reg;
+  line-height: 39px;
+  position: relative;
+  z-index:20;
+  margin-left:30px;
+  margin-bottom: 20px;
+}
+.member__text{
+  margin-left:30px;
+}
+.banner__wrap{
+  background: linear-gradient(to left, #FCE373 0%, #FCE373 50%, #4849D7 50%, #4849D7 100%);
+}
+.banner__section{
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.banner__left{
+  width: 59%;
+  background: #4849D7;
+  position: relative;
+  padding-left: 60px;
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+.banner__right{
+  width: 41%;
+  background: #4849D7 url("/images/rectangle_1.svg");
+  padding-right: 60px;
+  padding-top: 60px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.back_link{
+  svg{
+    margin-right: 14px;
+  }
+  color: #FFFFFF;
+}
+.banner{
+  padding-top: 110px;
+.back_link{
+    position:absolute;
+    top: 100px;
+    left: 0;
+  }
+}
+.next_link{
+  color:#FCE373;
+  font-size: 40px;
+  font-family: $ffm-reg;
+  max-width: 419px;
+  display: block;
+  span{
+    display: block;
+  }
 }

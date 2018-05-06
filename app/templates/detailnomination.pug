@@ -5,7 +5,10 @@ block content
     .detailnom__header
       .detailnom__left
         .detailnom__back
-          a(href="nomination.html") Назад к номинациям
+          a.back_link(href="nomination.html")
+            svg(role='img', width='32', height='14')
+              use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#arrow_back')
+            span Назад к номинациям
         .detailnom__descript
           h1.detailnom__title Музыкальное искусство
           .detailnom__text Участвуют все категории инвалидов вместе. Продолжительность выступления не более 7 минут.
@@ -28,8 +31,78 @@ block content
           .about__ancor
             a(href="#audio") Следующая номинация
       .about__right
-        h1 Результаты
         .content
+          h2.detailnom__h2 Номинации
+          .detailnom__section
+            .detailnom__list(data-number="01")
+              span Академическое инструментальное исполнительство
+            p Сольное и ансамблевое, на народных инструментах
+            .detailnom__strong Секции:
+            ul.detailnom__ul
+              li.detailnom__li
+                strong.detailnom__name Фортепьяно
+                ol.detailnom__ol
+                  li.detailnom__li Одно произведение (либо его части) эпохи барокко или классицизма.
+                  li.detailnom__li  Одно произведение западно-европейского или отечественного композитора ХIХ–ХХI вв.
+              li.detailnom__li
+                strong.detailnom__name Оркестровые струнные инструменты
+                ol.detailnom__ol
+                  li.detailnom__li Одно произведение (либо его части) эпохи барокко или классицизма.
+                  li.detailnom__li  Одно произведение западно-европейского или отечественного ком
+              li.detailnom__li
+                strong.detailnom__name Оркестровые духовые инструменты
+                ol.detailnom__ol
+                  li.detailnom__li Одно произведение (либо его части) эпохи барокко или классицизма.
+                  li.detailnom__li  Одно произведение западно-европейского или отечественного ком
+              li.detailnom__li
+                strong.detailnom__name Вокальное искусство
+                p Два разнохарактерных произведения
+          .detailnom__section
+            .detailnom__list(data-number="02")
+              span Вокальное искусство
+            p Сольное и ансамблевое, на народных инструмента
+          .detailnom__section
+            .detailnom__list(data-number="03")
+              span Музыкальный фольклор народов России и мира
         .block__blue
-          .h2 Члены рабочей группы
+          h2.detailnom__h2 Члены рабочей группы
+          .member__wrap
+            .member__block
+              .member__pick
+                svg(role='img', width='54', height='64')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#wo')
+              .member__title Ольга Валерьевна Бокова
+              .member__text Заслуженный работник культуры УР, зав отд. ф-но РМК.
+            .member__block
+              .member__pick
+                img(role='img' src="assets/image3.png")
+              .member__title Татьяна Павловна Белава
+              .member__text Заслуженный работник культуры УР, преподаватель (скрипка), зам. директора по научно-методической работе РМК.
+            .member__block
+              .member__pick
+                svg(role='img', width='54', height='64')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#wo')
+              .member__title Сергей Николаевич Воеводский
+              .member__text Pаслуженный артист УР, зав. отд. оркестровых, духовых и ударных инструментов РМК
+            .member__block
+              .member__pick
+                svg(role='img', width='54', height='64')
+                  use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#me')
+              .member__title Сергей Николаевич Воеводский
+              .member__text Pаслуженный артист УР, зав. отд. оркестровых, духовых и ударных инструментов РМК
         +share()
+  .banner__wrap
+    .banner__section
+      .banner__left
+        .banner
+          a.back_link(href="nomination.html")
+            svg(role='img', width='32', height='14')
+              use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#arrow_back')
+            span Назад к номинациям
+          a.next_link(href="nomination.html")
+            span Изобразительное искусство
+            svg(role="img" width="185" height="14")
+              use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_next")
+      .banner__right
+        svg(role='img', width='304', height='344')
+          use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon2')
