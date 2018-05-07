@@ -1,0 +1,63 @@
+extends _layouts/detailnomination
+include _modules/news/news
+include _modules/share/share
+block content
+  section.section-top.purple-top
+    .container
+      .news__top
+        h1.news__h1 Новости
+        a.send(href="propose.html") Предложить новость
+  .about__wrap
+    .about__container
+      .about__left
+        .about__ancors
+          .about__ancor
+            a(href="#music") Все
+          .about__ancor
+            a(href="#art") СМИ о нас
+          .about__ancor
+            a(href="#art") 2018
+          .about__ancor
+            a(href="#art") 2017
+          .about__ancor
+            a(href="#art") 2016
+          .about__ancor
+            a(href="#art") 2015
+          .about__ancor
+            a(href="#art") 2014
+          .about__ancor
+            a(href="#art") 2013
+          .about__ancor
+            a(href="#art") 2012
+      .about__right
+        h2.commitet__h2 2018 год
+        .news__row
+          .news__item
+            .news__img
+              img(src="/assets/image.png")
+            .news__date 13 апреля 2018
+            .news__title Зимняя школа инклюзивного танца
+            .news__anons С 9 по 16 января 2018 года в Доме отдыха «Ершово» в рамках VI Международного благотворительного танцевального фестиваля «Inclusive Dance» состоится зимняя Школа инклюзивного танца (ШИТ).
+            a(href="#").news__link Читать полностью
+          .news__item
+            .news__img
+              img(src="/assets/image2.png")
+            .news__date 13 апреля 2018
+            .news__title Зимняя школа инклюзивного танца
+            .news__anons С 9 по 16 января 2018 года в Доме отдыха «Ершово» в рамках VI Международного благотворительного танцевального фестиваля «Inclusive Dance» состоится зимняя Школа инклюзивного танца (ШИТ).
+            a(href="#").news__link Читать полностью
+          .news__item
+            .news__img
+              img(src="/assets/image.png")
+            .news__date 13 апреля 2018
+            .news__title Зимняя школа инклюзивного танца
+            .news__anons С 9 по 16 января 2018 года в Доме отдыха «Ершово» в рамках VI Международного благотворительного танцевального фестиваля «Inclusive Dance» состоится зимняя Школа инклюзивного танца (ШИТ).
+            a(href="#").news__link Читать полностью
+          .news__item
+            .news__img
+              img(src="/assets/image2.png")
+            .news__date 13 апреля 2018
+            .news__title Зимняя школа инклюзивного танца
+            .news__anons С 9 по 16 января 2018 года в Доме отдыха «Ершово» в рамках VI Международного благотворительного танцевального фестиваля «Inclusive Dance» состоится зимняя Школа инклюзивного танца (ШИТ).
+            a(href="#").news__link Читать полностью
+        +share()

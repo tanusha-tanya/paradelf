@@ -1,0 +1,40 @@
+extends _layouts/sliderless
+block content
+  .propose__top
+    .container
+      a(href="news.html").propose__back
+        svg(role='img', width='32', height='14')
+          use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#arrow_back')
+        span Вернуться к списку новостей
+  .propose
+    .propose__form
+      h1.propose__h1 Предложить новость
+      form
+        fieldset.propose__field
+          label(for="title") Введите заголовок
+          input#title(type="text", placeholder="Придумайте заголовок")
+        fieldset.propose__field
+          label(for="text") Введите текст
+          textarea#text(type="text", placeholder="Начните писать...")
+        fieldset.propose__field
+          input#file(type="file")
+          label(for="file") + Прикрепить файлы
+        fieldset.propose__field
+          label(for="link") Ссылка на новость
+          input#link(type="text", placeholder="Вставте ссылку на  новость")
+        fieldset.propose__field
+          label(for="title") Ф.И.О. автора
+          input(type="text", placeholder="Введите Ф.И.О.")
+        fieldset.propose__field
+          label(for="email") Электронная почта
+          input(type="text", placeholder="Введите электронную почту")
+        fieldset.propose__field.form__flex-full
+          input(type="reset", placeholder="Отмена")
+          input(type="submit", placeholder="Отправить новость")
+        fieldset.propose__field
+          input(type="checkbox" name="confirm" id="confirm")
+          label(for="confirm")
+            | Я согласен с
+            a(href="") условиями пользовательского соглашения
+            | и
+            a(href="") политикой конфиденциальности

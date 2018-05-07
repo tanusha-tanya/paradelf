@@ -58,7 +58,7 @@ background: -moz-linear-gradient(-60deg, #ffffff 0%, #ffffff 60%, #4849D7 60%, #
 background: -webkit-linear-gradient(-60deg, #ffffff 0%,#ffffff 60%,#4849D7 60%,#4849D7 100%);
 background: linear-gradient(150deg, #ffffff 0%,#ffffff 60%,#4849D7 60%,#4849D7 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4849D7', endColorstr='#4849D7',GradientType=1 );
-padding-bottom:30px;
+padding-bottom:50px;
 }
 }
 .container{
@@ -144,6 +144,9 @@ padding-bottom:30px;
   background: linear-gradient(to left, #FCE373 0%, #FCE373 50%, #4849D7 50%, #4849D7 100%);
 }
 }
+.purple-top{
+  background: #4849D7;
+}
 .inner__container{
   padding: 15px;
   @media(min-width:$tablet){
@@ -208,6 +211,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4849D7', end
   width:calc(34% - 30px);
   padding:0;
 }
+}
+.form__soc{
+  svg{
+    fill: #ffffff;
+  }
 }
 .back{
   display: flex;
@@ -667,6 +675,7 @@ label.file{
   position:relative;
   z-index:10;
   padding: 15px;
+  overflow: hidden;
   @media(min-width:$desctop){
     width: 75%;
     padding: 100px 0  0 106px;
@@ -1190,4 +1199,305 @@ h1.commitet__h1{
     display:block;
     margin: 27px 0;
   }
+}
+.number__block{
+  display:flex;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top:30px;
+  &:nth-of-type(2n+1){
+    max-width: 450px;
+    margin-right: 350px;
+  }
+  &:nth-of-type(2n){
+    margin-left: 350px;
+    max-width: 450px;
+  }
+}
+.number__text{
+  font-size: 24px;
+  font-family: $ffm-reg;
+}
+.number__pick{
+  margin-right: 60px;
+}
+.paradelf__text{
+  font-size: 18px;
+  line-height: 35px;
+  color: #ffffff;
+}
+.history__wrap{
+  display:flex;
+  margin: 0 -15px;
+}
+.history__block{
+  width: calc(50% - 30px);
+  margin: 40px 15px;
+}
+.history__pick{
+  max-width: 100%;
+  img{
+    max-width: 100%;
+  }
+}
+.history__title{
+  font-size: 24px;
+  font-family: $ffm-reg;
+  margin: 14px 0;
+}
+.history__text{
+  margin: 20px 0;
+}
+
+.history__link{
+  margin-top: 40px;
+  text-transform: uppercase;
+  color:  #F93877;
+  font-size: 14px;
+  display:flex;
+  align-items: flex-end;
+    span{
+    margin-right: 16px;
+  }
+}
+.document{
+  padding: 100px 0;
+}
+.document__row{
+  display: flex;
+  padding: 27px 0;
+  border-bottom: 1px solid #E9E9EA;
+  justify-content: space-between;
+}
+.document__title{
+  font-size: 20px;
+  font-family: $ffm-reg;
+}
+.document__cell{
+  &:nth-of-type(1){
+    width: 500px
+  }
+}
+.document__size{
+  color: #7A7A7A;
+}
+.left__city{
+  position:relative;
+  width: 75%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.city__title{
+  color: #ffffff;
+}
+.city__h1{
+  font-size: 84px;
+  letter-spacing: 0.02em;
+}
+.right__city{
+  padding:64px;
+}
+.gallery__wrap{
+  display:flex;
+  justify-content: space-between;
+}
+.smi__wrap{
+  display: flex;
+}
+.news__top{
+  position:relative;
+  margin: 0 auto;
+  text-align: center;
+  padding: 75px 0;
+}
+.news__h1{
+  font-size: 84px;
+  letter-spacing: 0.02em;
+  margin: 50px 0;
+  color: #ffffff;
+}
+.newsdetail__container{
+  width: 1440px;
+  padding: 30px 60px;
+  position: relative;
+  margin: 0 auto;
+  min-height: 540px;
+}
+.newsdetail__pick{
+  position: absolute;
+  top: 110px;
+}
+.newsdetail__h1{
+  font-size: 42px;
+}
+.newsdetail__autor{
+  color: #7A7A7A;
+  font-size: 16px;
+  margin-top:-20px;
+}
+.newsdetail__slider{
+  .slider__arrows svg{
+    fill: #262626
+  }
+  .slider__counter{
+    color: #262626
+  }
+  margin: 60px 0;
+}
+.newsdetail__gallery{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 60px;
+}
+.newsdetail__wrapgallery{
+  position: absolute;
+  min-width: 1440px;
+  left: 0;
+}
+.newsdetail__containergallery{
+  width: 1090px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 408px;
+}
+.contacts__wrap{
+  background: linear-gradient(to left, #4849D7  0%, #4849D7 50%, #FCE373 50%, #FCE373 100%);
+}
+.contacts__container{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.contact__row{
+  background:#4849D7 url(/images/rectangle_left.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+.contacts__left{
+  width: 42%;
+  padding-top: 123px;
+  padding-left: 90px;
+  padding-bottom: 123px;
+  position:relative;
+}
+.contacts__right{
+  padding-right: 90px;
+  width: 58%;
+}
+.contacts__block{
+  margin: 102px 0;
+  padding-top: 42px;
+}
+.contacts__h1{
+  font-size: 84px;
+  letter-spacing: 0.02em;
+  font-family: $ffm-reg;
+  color: #ffffff;
+}
+.contacts__name{
+  font-size: 28px;
+  color: #FFFFFF;
+  font-family: $ffm-reg;
+}
+.contacts__row{
+  display: flex;
+  a{
+    color: #ffffff;
+    font-family: $ffm-reg;
+    margin-right: 31px;
+    line-height: 30px;
+  }
+}
+.contacts__soc{
+  position:absolute;
+  bottom: 30px;
+  svg{
+    fill: #000000;
+  }
+}
+.propose__form{
+  max-width: 864px;
+  margin: 0 auto;
+}
+.propose__top{
+  background:#4849D7;
+}
+.propose__back{
+  color: #ffffff;
+  svg{
+    fill: #ffffff;
+    margin-right: 12px;
+  }
+}
+.propose__h1{
+  font-size: 42px;
+  color: #262626;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+fieldset.propose__field{
+  max-width: 864px;
+  margin: 40px auto;
+  position: relative;
+  input[type="text"]{
+    border: 1px solid #E9E9EA;
+    width: 100%;
+    height: 64px;
+    padding: 20px;
+    margin: 10px 0;
+  }
+  textarea{
+    border: 1px solid #E9E9EA;
+    width: 100%;
+    height: 176px;
+    padding: 20px;
+    margin: 10px 0;
+  }
+  input[type="file"]{
+     position:absolute;
+     visibility:hidden;
+    &~label{
+      width: 100%;
+      height: 64px;
+      background: #F2F2F2;
+      text-align: center;
+      color:  #F93877;
+      display: inline-block;
+      padding-top: 20px;
+    }
+  }
+  label {
+  margin: 10px 0;
+}
+input[type="reset"]{
+  border: 1px solid #F93877;
+  color: #F93877;
+  width: 304px;
+  height: 64px;
+  margin-right: 32px;
+  background: #ffffff;
+}
+input[type="submit"]{
+  border: 1px solid #F93877;
+  color: #ffffff;
+  width: 304px;
+  height: 64px;
+  background: #F93877;
+}
+input[type="checkbox"] + label{
+  max-width: 304px;
+}
+
+input[type="checkbox"]:checked + label::after{
+  top: 0;
+}
+input[type="checkbox"] + label::before{
+    top: 0;
+}
+}
+.propose__form{
+  margin-top: 50px;
 }

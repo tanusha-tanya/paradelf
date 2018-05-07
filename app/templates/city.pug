@@ -1,0 +1,163 @@
+extends _layouts/detailnomination
+include _modules/share/share
+block content
+  section.section-top.inner-top
+    .inner__container
+      .inner__header
+        .left__city
+          a.back_link(href="nomination.html")
+            svg(role="img" width="32" height="14")
+              use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_back")
+            span Вернуться назад
+          .city__title
+            .city__date 27-28 ноября 2016 г.
+            h1.city__h1 Москва
+            .city__text Первые парадельфийские игры
+        .right__city
+          img(src="assets/city.png")
+  .about__wrap
+    .about__container
+      .about__left
+        .about__ancors
+          .about__ancor
+            a(href="#music") О играх
+          .about__ancor
+            a(href="#art") Как это было
+          .about__ancor
+            a(href="#art") Новости
+          .about__ancor
+            a(href="#art") Результаты
+      .about__right
+        .content
+          h2.commitet__h2 О играх
+          p В ноябре 2016 года в городе Москва впервые в мировой истории состоялись Первые Международные Парадельфийские игры — творческие состязания среди инвалидов различных нозологий в области культуры и искусства. Парадельфийские игры стали достижением творчески одаренных людей с инвалидностью и праздников для участников и зрителей!
+          h2.commitet__h2 Как это было
+          .video__wrap
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/iW2dgIzON5Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+          p Основными задачами Парадельфийских игр являются социализация людей с ограниченными возможностями средствами искусства, реальное воплощение равных прав людей с инвалидностью на участие во всех областях жизни общества, поддержка и развитие их таланта.
+          p Открытые Парадельфийские игры будут направлены, в первую очередь, на представление широкой общественности данного вида соревнований и соберут более 500 участников, прошедших предварительный отбор из 40 субъектов Российской Федерации. Одновременно, в Играх примут участие представители из разных стран мира: коллективы из Казахстана, Белоруссии, Франции, Нидерландов, Аргентины, Испании, Португалии, Италии и других.
+          p Состязания пройдут по восьми номинациям: изобразительное искусство, аудио-визуальное искусство, театральное искусство, музыкальное искусство, художественное слово, хореографическое искусство, оригинальный жанр и жестовая песня.
+          p Данное мероприятие является логическим продолжением Первых Парадельфийских Дельфийских игр Республики Казахстан (1-5 ноября 2016 года), победители которых будут представлять страну в вышеуказанном мероприятии.
+          p Организацию Игр осуществляет Национальный Парадельфийский комитет России совместно с всероссийскими общественными организациями инвалидов при поддержке Национального Дельфийского совета России, Министерства труда и социальной защиты Российской Федерации, Министерства культуры Российской Федераци
+          p Заключительный гала-концерт открытых Парадельфийских игр пройдет 28 ноября в 15.00 часов в Большом Зале Конгрессов Отеля «Космос».
+        .gallery
+          h2.commitet__h2 32 фотографии
+          .gallery__wrap
+            .gallery__item
+              img(src="assets/gallery1.png")
+            .gallery__item
+              img(src="assets/gallery2.png")
+            .gallery__item
+              img(src="assets/gallery3.png")
+            .gallery__item
+              img(src="assets/gallery4.png")
+          .gallery__arrows
+        .block__blue
+          .smi
+            h2.commitet__h2 СМИ о нас
+            .smi__wrap
+              .news__item
+                .news__img
+                  img(src="/assets/image.png")
+                .news__date 13 апреля 2018
+                .news__title Зимняя школа инклюзивного танца
+                .news__anons С 9 по 16 января 2018 года в Доме отдыха «Ершово» в рамках VI Международного благотворительного танцевального фестиваля «Inclusive Dance» состоится зимняя Школа инклюзивного танца (ШИТ).
+                a(href="#").news__link Читать полностью
+              .news__item
+                .news__img
+                  img(src="/assets/image2.png")
+                .news__date 13 апреля 2018
+                .news__title Зимняя школа инклюзивного танца
+                .news__anons С 9 по 16 января 2018 года в Доме отдыха «Ершово» в рамках VI Международного благотворительного танцевального фестиваля «Inclusive Dance» состоится зимняя Школа инклюзивного танца (ШИТ).
+                a(href="#").news__link Читать полностью
+        h2.commitet__h2 Результаты
+        p Официальная церемония закрытия состоялась 22 апреля 2017 года, в рамках которой были объявлены шесть лидеров официального командного первенства Шестнадцатых молодежных Дельфийских игр России: шестое место завоевала делегация Пермского края, пятое – Тульской области, четвертое – Самарской области, третье – Новосибирской области, второе – Свердловской области, первое – города Москвы.  В ходе гала-концерта выступили лауреаты Игр (золотые медали).
+        .result__wrap
+          .result__nomination Фортепьяно
+          .result__group__name Возрастная группа «10-13 лет»
+          .result__group
+            .result__position
+              .result__place 1 место
+              .result__name Егор Алексеевич Опарин
+              .result__city г. Москва
+            .result__position
+              .result__place 2 место
+              .result__name Наталья Дмитриевна Хорохова
+              .result__city Рязанская область
+            .result__position
+              .result__place 3 место
+              .result__name Александо Олегович Валов
+              .result__city Свердловская область
+          .result__group__special Специальные дипломы
+          .result__group
+            .result__position
+              .result__place 1 место
+              .result__name Егор Алексеевич Опарин
+              .result__city г. Москва
+            .result__position
+              .result__place 2 место
+              .result__name Наталья Дмитриевна Хорохова
+              .result__city Рязанская область
+            .result__position
+              .result__place 3 место
+              .result__name Александо Олегович Валов
+              .result__city Свердловская область
+          .result__group__name Возрастная группа «10-13 лет»
+          .result__group
+            .result__position
+              .result__place 1 место
+              .result__name Егор Алексеевич Опарин
+              .result__city г. Москва
+            .result__position
+              .result__place 2 место
+              .result__name Наталья Дмитриевна Хорохова
+              .result__city Рязанская область
+            .result__position
+              .result__place 3 место
+              .result__name Александо Олегович Валов
+              .result__city Свердловская область
+        .result__wrap
+          .result__nomination Фортепьяно
+          .result__group__name Возрастная группа «10-13 лет»
+          .result__group
+            .result__position
+              .result__place 1 место
+              .result__name Егор Алексеевич Опарин
+              .result__city г. Москва
+            .result__position
+              .result__place 2 место
+              .result__name Наталья Дмитриевна Хорохова
+              .result__city Рязанская область
+            .result__position
+              .result__place 3 место
+              .result__name Александо Олегович Валов
+              .result__city Свердловская область
+          .result__group__special Специальные дипломы
+          .result__group
+            .result__position
+              .result__place 1 место
+              .result__name Егор Алексеевич Опарин
+              .result__city г. Москва
+            .result__position
+              .result__place 2 место
+              .result__name Наталья Дмитриевна Хорохова
+              .result__city Рязанская область
+            .result__position
+              .result__place 3 место
+              .result__name Александо Олегович Валов
+              .result__city Свердловская область
+          .result__group__name Возрастная группа «10-13 лет»
+          .result__group
+            .result__position
+              .result__place 1 место
+              .result__name Егор Алексеевич Опарин
+              .result__city г. Москва
+            .result__position
+              .result__place 2 место
+              .result__name Наталья Дмитриевна Хорохова
+              .result__city Рязанская область
+            .result__position
+              .result__place 3 место
+              .result__name Александо Олегович Валов
+              .result__city Свердловская область
+        +share()

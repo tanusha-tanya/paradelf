@@ -1,3 +1,89 @@
 extends _layouts/detailnomination
 include _modules/share/share
 block content
+  section.section-top.inner-top
+    .commitet__header
+      .commitet__left
+        h1.commitet__h1 Парадельфийские игры
+        span.paradelf__text Инклюзивные состязания людей с инвалидностью
+      .commitet__right
+        .commitet__contacts
+          p Связаться с нами
+          a(href="tel:+74956515400") +7 (495) 651-54-00
+          a(href="mailto:mail@IDCworld.org") mail@IDCworld.org
+          a(href="www.IDCworld.org") www.IDCworld.org
+  .about__wrap
+    .about__container
+      .about__left
+        .about__ancors
+          .about__ancor
+            a(href="#music") О играх
+          .about__ancor
+            a(href="#art") Парадельфийские игры в цифрах
+          .about__ancor
+            a(href="#art") Парадельфийские игры 2015-2018
+          .about__ancor
+            a(href="#art") Документы
+      .about__right
+        .content
+          h2.commitet__h2 О играх
+          p В ноябре 2016 года в городе Москва впервые в мировой истории состоялись Первые Международные Парадельфийские игры — творческие состязания среди инвалидов различных нозологий в области культуры и искусства. Парадельфийские игры стали достижением творчески одаренных людей с инвалидностью и праздников для участников и зрителей!
+          h2.commitet__h2 Парадельфийские игры в цифрах
+          .numbers
+            .number__block
+              .number__pick
+                svg(role="img" width="116" height="118")
+                  use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#win")
+              .number__text 29 номинаций в 8-ми видах искусств
+            .number__block
+              .number__pick
+                svg(role="img" width="116" height="118")
+                  use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#udmgirl")
+              .number__text Более 1500 участников
+            .number__block
+              .number__pick
+                svg(role="img" width="116" height="118")
+                  use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#russia")
+              .number__text Более 50 субъекта России
+            .number__block
+              .number__pick
+                svg(role="img" width="116" height="118")
+                  use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#globous")
+              .number__text 16 стран мира
+        .block__blue
+          .content
+            h2.commitet__h2 Парадельфийские игры 2015-2018
+            .history
+              .history__wrap
+                .history__block
+                  .history__pick
+                    img(src="assets/history1.png")
+                  .history__title Ижевск 2018
+                  .history__text Вторые Парадельфийские игры
+                  a(href="#").history__link
+                    span Подробнее
+                    svg(role='img', width='185', height='14')
+                      use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#arrow_news')
+                .history__block
+                  .history__pick
+                    img(src="assets/history2.png")
+                  .history__title Москва 2016
+                  .history__text Вторые Парадельфийские игры
+                  a(href="#").history__link
+                    span Подробнее
+                    svg(role='img', width='185', height='14')
+                      use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#arrow_news')
+        .document
+          h2.commitet__h2 Документы
+          .document__table
+            .document__row
+              .document__cell
+                a(href="#").document__title Положение о парадельфийских играх
+              .document__cell
+                .document__size docx, 4.2 МБ
+            .document__row
+              .document__cell
+                a(href="#").document__title Положение о парадельфийских играх
+              .document__cell
+                .document__size docx, 4.2 МБ
+        +share()

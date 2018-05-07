@@ -1,0 +1,33 @@
+extends _layouts/contacts
+block content
+  .contacts__wrap
+    .contacts__container
+      .contact__row
+        .contacts__left
+          h1.contacts__h1 Контакты
+          .contacts__soc
+            a.contacts__link(href="https://vk.com/paradel18")
+              svg(role='img', width='20', height='16')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#vk')
+            a.contacts__link(href="https://www.facebook.com/groups/224056361670273/")
+              svg(role='img', width='19', height='20')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#f')
+        .contacts__right
+          .contacts__block
+            .contacts__name Международный Парадельфийский комитет
+            .contacts__row
+              a(href="tel:+74956515400") +7 (495) 651-54-00
+              a(href="mailto:mail@IDCworld.org") mail@IDCworld.org
+              a(href="www.IDCworld.org")  www.IDCworld.org
+          .contacts__block
+            .contacts__name Национальный Парадельфийский совет России
+            .contacts__row
+              a(href="tel:+74956515400") +7 (495) 651-54-00
+              a(href="mailto:mail@IDCworld.org") mail@IDCworld.org
+              a(href="www.IDCworld.org") www.IDCworld.org
+          .contacts__block
+            .contacts__name Представительство вторых парадельфийских игр
+            .contacts__row
+              a(href="tel:+74956515400") +7 (495) 651-54-00
+              a(href="mailto:mail@IDCworld.org") mail@IDCworld.org
+              a(href="www.IDCworld.org") www.IDCworld.org
