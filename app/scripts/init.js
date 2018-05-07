@@ -137,4 +137,21 @@ var day = document.getElementById('day').innerHTML.toString().split(""),
   setDate();
 
   window.setInterval(setDate, 60000);//Надо отдельно делать инкремент для счетчика, брать значение 1 раз
+
      });
+     $(window).scroll(function(){   
+      ($(window).scrollTop() >= $(window).height())?$(".about__ancors").css(["position: fixed", "top: 100px"]):$(".about__ancors").css("position", "relative")
+    console.log($(window).scrollTop())  
+    })
+    $( document ).ready(function(){
+      var owl = $('.partners__carousel');
+      owl.owlCarousel({
+          items:4,
+          loop:true,
+          margin:10,
+          autoplay:true,
+          autoplayTimeout:1000,
+          autoplayHoverPause:true
+      });
+    }  )
+   
