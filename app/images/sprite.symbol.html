@@ -24,6 +24,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-arrow_down-dims { width: 16px; height: 305px; }
 	.svg-arrow_news-dims { width: 193px; height: 15px; }
 	.svg-arrow_next-dims { width: 305px; height: 15px; }
+	.svg-arrowleft-dims { width: 40px; height: 15px; }
 	.svg-back-dims { width: 33px; height: 15px; }
 	.svg-eye-dims { width: 32px; height: 23px; }
 	.svg-f-dims { width: 8px; height: 16px; }
@@ -71,6 +72,7 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 16 305" id="arrow_down" xmlns="http://www.w3.org/2000/svg"><path d="M15.071 297.429l-1.414-1.414L9 300.672V0H7v300.671l-4.657-4.656-1.414 1.414L8 304.5l7.071-7.071z" fill="#fff"/></symbol>
 		<symbol viewBox="0 0 193 15" id="arrow_news" xmlns="http://www.w3.org/2000/svg"><path d="M185.429 14.142l-1.414-1.414 4.657-4.657H0v-2h188.671l-4.656-4.657L185.429 0l7.071 7.071-7.071 7.071z" fill="#F93877"/></symbol>
 		<symbol viewBox="0 0 305 15" id="arrow_next" xmlns="http://www.w3.org/2000/svg"><path d="M297.429 0l-1.414 1.414 4.657 4.657H0v2h300.671l-4.656 4.657 1.414 1.414 7.071-7.071L297.429 0z" fill="#FCE373"/></symbol>
+		<symbol viewBox="0 0 40 15" id="arrowleft" xmlns="http://www.w3.org/2000/svg"><path d="M7.079 14.142l1.414-1.414L3.836 8.07h35.672v-2H3.836l4.657-4.657L7.08 0 .008 7.071l7.07 7.071z" fill="#262626"/></symbol>
 		<symbol viewBox="0 0 33 15" id="back" xmlns="http://www.w3.org/2000/svg"><path d="M7.071 14.142l1.414-1.414L3.828 8.07H32.5v-2H3.828l4.657-4.657L7.071 0 .001 7.071l7.07 7.071z" fill="#262626"/></symbol>
 		<symbol viewBox="0 0 32 23" id="eye" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M29.648 15.497c-.062-.078-6.3-7.805-13.648-7.805S2.412 15.419 2.35 15.497L0 13.63c.289-.365 7.191-8.94 16-8.94 8.809 0 15.709 8.574 16 8.939l-2.352 1.868z" fill="#262626"/><path d="M16 22.096c-4.258 0-7.723-3.465-7.723-7.724S11.742 6.648 16 6.648s7.723 3.465 7.723 7.724-3.465 7.724-7.723 7.724zM16 9.65a4.726 4.726 0 0 0-4.721 4.722A4.727 4.727 0 0 0 16 19.095a4.727 4.727 0 0 0 4.721-4.723A4.726 4.726 0 0 0 16 9.65zM17.5 0h-3.002v6.279H17.5V0zM7.705 8.148L3.918 3.136 1.523 4.945l3.788 5.012 2.394-1.81zM30.474 4.945l-2.394-1.81-3.788 5.013 2.394 1.809 3.788-5.012z" fill="#262626"/></g></symbol>
 		<symbol viewBox="0 0 8 16" id="f" xmlns="http://www.w3.org/2000/svg"><path d="M8 2.5a.5.5 0 0 1-.5.5H6c-1 0-1 .6-1 1v1.9a.1.1 0 0 0 .1.1h2.4a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H5.1a.1.1 0 0 0-.1.1v6.4a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V9.1a.1.1 0 0 0-.1-.1H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.4a.1.1 0 0 0 .1-.1V3c0-1.8 0-3 3-3h2.5a.5.5 0 0 1 .5.5v2z"/></symbol>
@@ -174,6 +176,17 @@ embedded above. They may be styled via CSS.
 						
 					</div>
 					<h2>arrow_next</h2>
+				</li>
+				<li title="arrowleft">
+					<div class="icon-box">
+						
+						<!-- arrowleft -->
+						<svg class="svg-arrowleft-dims">
+							<use xlink:href="#arrowleft"></use>
+						</svg>
+						
+					</div>
+					<h2>arrowleft</h2>
 				</li>
 				<li title="back">
 					<div class="icon-box">
@@ -471,6 +484,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>arrow_next</h2>
 				</li>
+				<li title="arrowleft">
+					<div class="icon-box">
+						
+						<!-- arrowleft -->
+						<svg class="svg-arrowleft-dims">
+							<use xlink:href="sprite.svg#arrowleft"></use>
+						</svg>
+						
+					</div>
+					<h2>arrowleft</h2>
+				</li>
 				<li title="back">
 					<div class="icon-box">
 						
@@ -699,7 +723,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Mon, 07 May 2018 16:53:57 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Tue, 08 May 2018 11:55:28 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

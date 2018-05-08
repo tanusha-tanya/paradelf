@@ -49,6 +49,10 @@ ul {
   line-height: 27px;
 }
 }
+b, strong{
+  font-family: $ffm-bold;
+  font-weight: normal;
+}
 .topwrapper{
   display: flex;
   flex-direction: column;
@@ -474,7 +478,27 @@ input[type="checkbox"]{
     flex-wrap: nowrap;
   }
 }
-
+.form__flex-space{
+  display:flex;
+  align-items:baseline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  a {
+    margin-left:20px;
+  }
+  @media(min-width: $desctop){
+    width: 529px;
+    max-width: 100%;
+    flex-wrap: nowrap;
+  }
+}
+.form__fields input[type="text"].input__small{
+  width: 192px;
+  margin-left:32px;
+}
+.form_explanation{
+  display: block;
+}
 .add{
   font-family:$f-reg;
   font-size:16px;
@@ -507,6 +531,7 @@ label.file{
   position:absolute;
   right: -175px;
   top: 50px;
+  max-width: 175px;
 }
   &:before{
     content: "";
@@ -684,7 +709,7 @@ label.file{
 .about__ancors{
   display:flex;
   flex-direction:column;
-  position:relative;
+  position:absolute;
 }
 .about__ancor{
   text-align: center;
@@ -1229,9 +1254,10 @@ h1.commitet__h1{
 .history__wrap{
   display:flex;
   margin: 0 -15px;
+  position:relative;
 }
 .history__block{
-  width: calc(50% - 30px);
+  width: calc(100% - 30px);
   margin: 40px 15px;
 }
 .history__pick{
@@ -1302,9 +1328,18 @@ h1.commitet__h1{
 .gallery__wrap{
   display:flex;
   justify-content: space-between;
+  position:relative;
+  height: 300px;
+  .owl-item img{
+    width: auto;
+  }
+}
+.gallery__item{
+  max-height: 300px;
 }
 .smi__wrap{
   display: flex;
+  position:relative;
 }
 .news__top{
   position:relative;
@@ -1352,7 +1387,6 @@ h1.commitet__h1{
   margin-top: 60px;
 }
 .newsdetail__wrapgallery{
-  position: absolute;
   min-width: 1440px;
   left: 0;
 }
@@ -1360,7 +1394,6 @@ h1.commitet__h1{
   width: 1090px;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 408px;
 }
 .contacts__wrap{
   background: linear-gradient(to left, #4849D7  0%, #4849D7 50%, #FCE373 50%, #FCE373 100%);
@@ -1500,4 +1533,16 @@ input[type="checkbox"] + label::before{
 }
 .propose__form{
   margin-top: 50px;
+}
+.owl-nav{
+  position: absolute;
+  top:-50px;
+  right:0;
+  display: flex;
+  .owl-prev{
+    margin-right: 20px;
+  }
+  .arrowright{
+    transform:scale(-1)
+  }
 }

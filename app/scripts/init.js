@@ -1,3 +1,41 @@
+$( document ).ready(function(){
+  $('.history__wrap, .smi__wrap').owlCarousel({
+        items:2,
+        loop:true,
+        dots:false,
+        nav:true,
+        navText : ['<svg role="img" width="32" height="14" class="arrowleft"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowleft"></use></svg>','<svg role="img" width="32" height="14" class="arrowright"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowleft"></use></svg>'],
+        navElement: 'div'
+    });
+$('.gallery__wrap').owlCarousel({
+      margin: 10,
+      loop:true,
+      dots:false,
+      nav:true,
+      autoheight: true,
+      navText : ['<svg role="img" width="32" height="14" class="arrowleft"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowleft"></use></svg>','<svg role="img" width="32" height="14" class="arrowright"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowleft"></use></svg>'],
+      navElement: 'div'
+  });
+$('.partners__carousel').owlCarousel({
+      items:7,
+      loop:true,
+      margin:10,
+      autoplay:true,
+      autoplayTimeout:1000,
+      dots:false,
+      nav:false,
+      autoplayHoverPause:true
+  });
+
+  $('form').sisyphus({timeout: 5});
+    $('.map__list').customScroll({
+      vertical:  true,
+      horizontal: false
+    });
+    $('.about__ancors').simpleScrollFollow({
+      limit_elem: '.about__left'
+    });
+})
 
 //сделать драгндроп, айтемам позишн абсолют
 document.addEventListener('DOMContentLoaded', function(){
@@ -139,19 +177,16 @@ var day = document.getElementById('day').innerHTML.toString().split(""),
   window.setInterval(setDate, 60000);//Надо отдельно делать инкремент для счетчика, брать значение 1 раз
 
      });
-     $(window).scroll(function(){   
+     /*$(window).scroll(function(){
       ($(window).scrollTop() >= $(window).height())?$(".about__ancors").css(["position: fixed", "top: 100px"]):$(".about__ancors").css("position", "relative")
-    console.log($(window).scrollTop())  
-    })
-    $( document ).ready(function(){
-      var owl = $('.partners__carousel');
-      owl.owlCarousel({
-          items:4,
-          loop:true,
-          margin:10,
-          autoplay:true,
-          autoplayTimeout:1000,
-          autoplayHoverPause:true
-      });
-    }  )
-   
+    console.log($(window).scrollTop())
+  })*/
+  ymaps.ready(init);
+     var myMap;
+
+     function init(){
+         myMap = new ymaps.Map("map", {
+             center: [56.840452, 53.243735],
+             zoom: 10
+         });
+     }

@@ -1,4 +1,4 @@
-/*.partners__wrap{
+.partners__wrap{
   width: 100%;
   overflow:hidden;
   margin-top: 60px;
@@ -7,23 +7,22 @@
   width:1090px;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 75px;
-}*/
+}
 .partners__title{
   margin: 40px 0;
   font-size: 28px;
   font-family: $ffm-reg;
 }
-/*.partners__carousel{
+.partners__carousel{
   display: flex;
   justify-content: flex-start;
+  height: 90px;
   @media(min-width:$desctop){
   position: absolute;
   min-width:1440px;
   left: 0;
 }
 }
-.partners__carousel__item{
+.partners__item{
   margin-right: 110px;
 }
-*/
