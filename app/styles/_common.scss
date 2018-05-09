@@ -170,7 +170,7 @@ padding-bottom:50px;
     justify-content: space-between;
     padding: 60px 60px 0 60px;
     .slider{
-      margin: 40px 0 0 0;
+      margin: 36px 0 0 0;
     }
   }
 }
@@ -692,7 +692,8 @@ label.file{
   font-size: 18px;
   @media(min-width:$desctop){
     width: 25%;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 .about__right{
@@ -710,6 +711,9 @@ label.file{
   display:flex;
   flex-direction:column;
   position:absolute;
+  @media(min-width:$desctop) and (max-width:1900px){
+  right: 5%;
+}
 }
 .about__ancor{
   text-align: center;
@@ -724,6 +728,22 @@ label.file{
 .content{
   @media(min-width:$desctop){
     max-width: 750px;
+  }
+  P{
+    font-family: $f-reg;
+    font-size: 18px;
+    @media(min-width:$tablet){
+    line-height: 35px;
+    margin: 40px 0;
+  }
+}
+ol, ul{
+  @media(min-width:$tablet){
+    margin: 40px 0;
+  }
+  li {
+    font-size: 18px;
+  }
   }
 }
 .about__wrap{
@@ -964,36 +984,45 @@ label.file{
   font-family:$ffm-reg;
 }
 .detailnom__header{
-  display: flex;
   max-width: 1440px;
   position: relative;
   margin: 0 auto;
+  @media(min-width: $tablet){
+    display: flex;
+  }
 }
 .detailnom__left{
-  width: 66%;
   background: #4849D7;
   position:relative;
-  padding-left: 60px;
-  padding-top: 60px;
-  padding-bottom: 70px;
+  @media(min-width: $tablet){
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    width: 66%;
+  }
 }
 .detailnom__right{
-  width: 34%;
-  background: #4849D7 url("/images/rectangle_1.svg");
-  padding-right: 60px;
-  padding-top: 60px;
   position: relative;
   svg{
     float: right;
   }
+  @media(min-width: $middle){
+    width: 34%;
+    background: #4849D7 url("/images/rectangle_1.svg");
+    padding-right: 60px;
+    padding-top: 60px;
+}
 }
 .detailnom__descript{
   padding-left: 8%;
 }
 .detailnom__title{
-  font-size: 84px;
-  letter-spacing: 0.02em;
+  font-size: 30px;
   color: #FFFFFF;
+  @media(min-width: $desctop){
+    font-size: 84px;
+    letter-spacing: 0.02em;
+  }
 }
 .detailnom__text{
   max-width: 500px;
@@ -1009,13 +1038,14 @@ label.file{
 }
 .detailnom__card{
   background: #EBFDFF;
-  width: 560px;
   height: 256px;
   position: absolute;
   bottom: -38px;
   z-index: 100;
   left: -268px;
+  display:flex;
 }
+
 .block__blue{
   background:#EBFDFF;
   margin-left: -106px;
@@ -1029,23 +1059,47 @@ label.file{
   margin:0;
 }
 .detailnom__section{
-  margin: 40px 0 40px 50px;
+  margin: 40px 0 40px 0;
+  padding-left: 50px;
+  font-size: 18px;
+  overflow:hidden;
+  height: 50px;
+  cursor:pointer;
   p{
     margin: 5px 0;
   }
+  strong{
+    font-family: "gothamproMedium", Arial, Verdana, sans-serif;
+    line-height: 38px;
+    font-size: 20px;
+  }
+  ol{
+    padding-left: 20px;
+  }
+  &>ul>li{
+    margin-bottom: 54px;
+    strong{
+      font-size: 18px;
+    }
+  }
+  &>ul li{
+    font-size: 18px;
+  }
+}
+.openSection{
+  height: auto;
 }
 .detailnom__list{
   font-family: $ffm-reg;
   line-height: 45px;
   font-size: 24px;
   position: relative;
-  span{
-    text-decoration: underline;
-  }
+  text-decoration: underline;
   &:before{
     content: attr(data-number);
       margin-left: -50px;
       margin-right: 20px;
+      text-decoration: none;
   }
 }
 .detailnom__strong{
@@ -1075,6 +1129,12 @@ label.file{
 .detailnom__ul{
   &>.detailnom__li{
     margin-bottom: 54px;
+  }
+}
+.detailnom__pick{
+  display: none;
+  @media(min-width:$middle){
+  display: block;
   }
 }
 .member__wrap{
@@ -1141,12 +1201,17 @@ label.file{
   z-index: 20;
 }
 .banner__wrap{
+  background:  #4849D7;
+  @media(min-width:$tablet){
   background: linear-gradient(to left, #FCE373 0%, #FCE373 50%, #4849D7 50%, #4849D7 100%);
 }
+}
 .banner__section{
-  display: flex;
   margin: 0 auto;
   max-width: 1440px;
+  @media(min-width:$tablet){
+    display: flex;
+  }
 }
 .banner__left{
   width: 59%;
@@ -1193,27 +1258,36 @@ label.file{
   max-width: 1440px;
   position:relative;
   margin: 0 auto;
-  display: flex;
+  @media(min-width: $tablet){
+    display: flex;
+  }
 }
 .commitet__left{
-  width: 75%;
   background: #4849D7;
-  padding-top:120px;
-  padding-bottom:120px;
-  padding-left: 8%;
-  padding-right: 8%;
+  @media(min-width: $tablet){
+    width: 75%;
+    padding-top:120px;
+    padding-bottom:120px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
 }
 .commitet__right{
-  width: 25%;
   background: #FCE373;
   text-align:center;
-  padding-top:120px;
-  padding-bottom:120px;
+  @media(min-width: $tablet){
+    width: 25%;
+    padding-top:120px;
+    padding-bottom:120px;
+  }
 }
 h1.commitet__h1{
-  font-size: 84px;
-  letter-spacing: 0.02em;
+  font-size: 30px;
   color: #FFFFFF;
+  @media(min-width: $desctop){
+    font-size: 84px;
+    letter-spacing: 0.02em;
+  }
 }
 .commitet__contacts{
   p{
@@ -1252,13 +1326,17 @@ h1.commitet__h1{
   color: #ffffff;
 }
 .history__wrap{
-  display:flex;
-  margin: 0 -15px;
+
   position:relative;
+  @media(min-width:$tablet){
+    display:flex;
+    margin: 0 -15px;
+  }
 }
 .history__block{
+    @media(min-width:$tablet){
   width: calc(100% - 30px);
-  margin: 40px 15px;
+  margin: 40px 15px;}
 }
 .history__pick{
   max-width: 100%;
@@ -1319,11 +1397,16 @@ h1.commitet__h1{
   color: #ffffff;
 }
 .city__h1{
-  font-size: 84px;
-  letter-spacing: 0.02em;
+  font-size: 30px;
+  @media(min-width:$middle){
+    font-size: 84px;
+    letter-spacing: 0.02em;
+  }
 }
 .right__city{
+  @media(min-width:$middle){
   padding:64px;
+}
 }
 .gallery__wrap{
   display:flex;
@@ -1335,7 +1418,28 @@ h1.commitet__h1{
   }
 }
 .gallery__item{
-  max-height: 300px;
+  img{
+    max-height: 300px;
+  }
+
+}
+.owl-item{
+  &:nth-of-type(2n+1){
+    .gallery__item img{
+    border: 16px solid  #4849D7;
+    }
+  }
+  &:nth-of-type(2n){
+  .gallery__item  img{
+    border: 16px solid  #FCE373;
+    }
+  }
+  &:nth-of-type(3n){
+  .gallery__item  img{
+    border: 16px solid  #F93877;
+    }
+  }
+
 }
 .smi__wrap{
   display: flex;
@@ -1348,21 +1452,34 @@ h1.commitet__h1{
   padding: 75px 0;
 }
 .news__h1{
-  font-size: 84px;
-  letter-spacing: 0.02em;
-  margin: 50px 0;
+  font-size: 30px;
   color: #ffffff;
+  @media(min-width:$desctop){
+    font-size: 84px;
+    letter-spacing: 0.02em;
+    margin: 50px 0;
+  }
 }
 .newsdetail__container{
-  width: 1440px;
+  max-width: 1440px;
   padding: 30px 60px;
   position: relative;
   margin: 0 auto;
   min-height: 540px;
+  width:100%;
 }
 .newsdetail__pick{
   position: absolute;
   top: 110px;
+  max-width: 100%;
+  @media(min-width:$desctop){
+  width: 1312px;
+  overflow: hidden;
+  height: 440px;
+  img{
+    width: 100%;
+  }
+}
 }
 .newsdetail__h1{
   font-size: 42px;
@@ -1387,8 +1504,10 @@ h1.commitet__h1{
   margin-top: 60px;
 }
 .newsdetail__wrapgallery{
+  @media(min-width:$desctop){
   min-width: 1440px;
   left: 0;
+}
 }
 .newsdetail__containergallery{
   width: 1090px;
@@ -1396,38 +1515,56 @@ h1.commitet__h1{
   position: relative;
 }
 .contacts__wrap{
+  background: #4849D7;
+    @media(min-width:$tablet){
   background: linear-gradient(to left, #4849D7  0%, #4849D7 50%, #FCE373 50%, #FCE373 100%);
+}
 }
 .contacts__container{
   max-width: 1440px;
   margin: 0 auto;
 }
 .contact__row{
-  background:#4849D7 url(/images/rectangle_left.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
+  @media(min-width:$tablet){
+    background:#4849D7 url(/images/rectangle_left.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+  }
 }
 .contacts__left{
-  width: 42%;
-  padding-top: 123px;
-  padding-left: 90px;
-  padding-bottom: 123px;
+
   position:relative;
+  @media(min-width:$tablet){
+    width: 42%;
+    padding-top: 123px;
+    padding-left: 90px;
+    padding-bottom: 123px;
+  }
+
 }
 .contacts__right{
-  padding-right: 90px;
-  width: 58%;
+
+  @media(min-width:$tablet){
+    padding-right: 90px;
+    width: 58%;
+  }
 }
 .contacts__block{
-  margin: 102px 0;
-  padding-top: 42px;
+
+  @media(min-width:$tablet){
+    margin: 102px 0;
+    padding-top: 42px;
+  }
 }
 .contacts__h1{
-  font-size: 84px;
-  letter-spacing: 0.02em;
+  font-size:30px;
   font-family: $ffm-reg;
   color: #ffffff;
+@media(min-width:$desctop){
+  font-size: 84px;
+  letter-spacing: 0.02em;
+}
 }
 .contacts__name{
   font-size: 28px;

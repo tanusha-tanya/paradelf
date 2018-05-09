@@ -1,6 +1,13 @@
 include ../_modules/headerinner/headerinner
 include ../_modules/partners/partners
 include ../_modules/footer/footer
+include ../_modules/header/header
+include ../_modules/mainmenu/mainmenu
+include ../_modules/slider/slider
+include ../_modules/date/date
+include ../_modules/button/button
+include ../_modules/contacts/contacts
+include ../_modules/description/description
 
 doctype html
 html.no-js(lang="ru")
@@ -15,4 +22,18 @@ html.no-js(lang="ru")
     block content
     +partners()
     +footer()
+    .hidden__menu
+      section.section-top
+        .container
+          .row
+            .col-7
+              +mainmenu()
+            .col-5
+              .right__block
+                .slider
+                  +slider()
+                .flex.button__counter
+                  +date()
+                  .button
+                    +button()
     include ../_includes/scripts

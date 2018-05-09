@@ -8,8 +8,7 @@ $( document ).ready(function(){
         navElement: 'div'
     });
 $('.gallery__wrap').owlCarousel({
-      margin: 10,
-      loop:true,
+      item:4,
       dots:false,
       nav:true,
       autoheight: true,
@@ -17,7 +16,7 @@ $('.gallery__wrap').owlCarousel({
       navElement: 'div'
   });
 $('.partners__carousel').owlCarousel({
-      items:7,
+      items:5,
       loop:true,
       margin:10,
       autoplay:true,
@@ -35,25 +34,34 @@ $('.partners__carousel').owlCarousel({
     $('.about__ancors').simpleScrollFollow({
       limit_elem: '.about__left'
     });
+
+    var menuIsOpen = false;
+    var menuContent = $(".hidden__menu").html();
+    var sectionTop = ($(".contacts__wrap").length > 0)?sectionTop = $(".contacts__wrap"): sectionTop = $(".section-top.inner-top");
+    $(".header__gumburger").on("click", function(){
+      console.log(menuIsOpen)
+      if (menuIsOpen === false){
+       sectionTop.hide();
+      $(".header").wrap('<div class="topwrapper"></div>')
+      $(".topwrapper").append(menuContent);
+      menuIsOpen = true;
+      }
+      else{
+        $(".topwrapper .section-top").remove();
+        $(".header").unwrap();
+        sectionTop.show();
+        menuIsOpen = false;
+      }
+
+    })
+    $(".detailnom__section").on("click", function(){
+        $(this).toggleClass("openSection")
+    })
+    $(".gallery__item-link").magnificPopup({type:'image'});
 })
 
-//сделать драгндроп, айтемам позишн абсолют
+
 document.addEventListener('DOMContentLoaded', function(){
-
-/*
-  var button = document.getElementsByClassName('header__button');
-  var ismenuOpen = false;
-
-  button.addEventListener("click", function(){
-    if(ismenuOpen === false){
-    document.body.className = ("menuopen");
-      ismenuOpen = true;
-    }
-    else{
-      document.body.className = ("");
-      ismenuOpen = false;
-    }
-  };*/
 
   var slider = document.getElementById('slider'),
     left = document.getElementById('left'),
@@ -102,14 +110,6 @@ right.addEventListener("click", function() {
   }
 });
 
-/*var myDate = new XMLHttpRequest();
-request.onreadystatechange = fanction(){
-  if(request.readyState == 4 && request.status == 200){
-    sTime = request.responseText
-  }
-}
-request.open('GET', '/time.php');
-request.send();*/
 
 function setDate(){
 var sTime = new Date();//поменять на время на сервере
@@ -176,17 +176,4 @@ var day = document.getElementById('day').innerHTML.toString().split(""),
 
   window.setInterval(setDate, 60000);//Надо отдельно делать инкремент для счетчика, брать значение 1 раз
 
-     });
-     /*$(window).scroll(function(){
-      ($(window).scrollTop() >= $(window).height())?$(".about__ancors").css(["position: fixed", "top: 100px"]):$(".about__ancors").css("position", "relative")
-    console.log($(window).scrollTop())
-  })*/
-  ymaps.ready(init);
-     var myMap;
-
-     function init(){
-         myMap = new ymaps.Map("map", {
-             center: [56.840452, 53.243735],
-             zoom: 10
-         });
-     }
+});

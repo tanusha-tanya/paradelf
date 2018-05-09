@@ -27,6 +27,7 @@
   background: $decorateColor;
   cursor:pointer;
   position:relative;
+  z-index:101;
   span{
     display:block;
     width:20px;
@@ -66,8 +67,5 @@
 }
 }
 .hidden__menu{
-  position:absolute;
   display: none;
-  background:#fff;
-  z-index:100;
 }
