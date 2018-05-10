@@ -818,11 +818,13 @@ ol, ul{
   background-size: contain;
 }
 .jury__text{
-  padding: 30px;
+  padding: 30px 90px 0 30px;
   position: relative;
   background: $notImportantBg;
   background-position: left center;
   background-repeat:no-repeat;
+  margin-right: 120px;
+  max-width:560px;
   span{
     color: #7A7A7A;
   }
@@ -1042,8 +1044,7 @@ ol, ul{
   position: absolute;
   bottom: -38px;
   z-index: 100;
-  left: -268px;
-  display:flex;
+  right:30px;
 }
 
 .block__blue{
@@ -1062,8 +1063,6 @@ ol, ul{
   margin: 40px 0 40px 0;
   padding-left: 50px;
   font-size: 18px;
-  overflow:hidden;
-  height: 50px;
   cursor:pointer;
   p{
     margin: 5px 0;
@@ -1086,8 +1085,17 @@ ol, ul{
     font-size: 18px;
   }
 }
+.detailnom__spoil{
+  height: 0;
+  overflow:hidden;
+  opacity: 0;
+  transition: opacity .3s;
+}
 .openSection{
-  height: auto;
+  .detailnom__spoil{
+    height: auto;
+    opacity: 1;
+  }
 }
 .detailnom__list{
   font-family: $ffm-reg;
@@ -1135,6 +1143,10 @@ ol, ul{
   display: none;
   @media(min-width:$middle){
   display: block;
+  position: absolute;
+  max-height: 256px;
+  right: 0;
+  top: 0;
   }
 }
 .member__wrap{
@@ -1388,13 +1400,13 @@ h1.commitet__h1{
 .left__city{
   position:relative;
   width: 75%;
-  padding-top: 120px;
   padding-bottom: 120px;
   padding-left: 8%;
   padding-right: 8%;
 }
 .city__title{
   color: #ffffff;
+  margin-top:100px;
 }
 .city__h1{
   font-size: 30px;
@@ -1405,7 +1417,9 @@ h1.commitet__h1{
 }
 .right__city{
   @media(min-width:$middle){
-  padding:64px;
+  img{
+    margin-bottom: 79px;
+  }
 }
 }
 .gallery__wrap{
@@ -1461,17 +1475,17 @@ h1.commitet__h1{
   }
 }
 .newsdetail__container{
-  max-width: 1440px;
   padding: 30px 60px;
   position: relative;
   margin: 0 auto;
-  min-height: 540px;
+  max-width: 1440px;
   width:100%;
 }
 .newsdetail__pick{
-  position: absolute;
-  top: 110px;
+  position: relative;
+  top: 40px;
   max-width: 100%;
+  margin: 0 auto;
   @media(min-width:$desctop){
   width: 1312px;
   overflow: hidden;
