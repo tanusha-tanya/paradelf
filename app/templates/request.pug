@@ -10,56 +10,67 @@ block content
             h2 Информация о стране или субъекте РФ
             fieldset
               label(for="country") Ваша страна
-              input(type="text" name="country" placeholder="Вевдите название страны" id="country")
-              ul(style="display: none;")
-                li.selected
-                li
-            fieldset
-              label(for="subject") Субъект РФ
-              input(type="text" name="subject" placeholder="Введите название субъекта" id="subject")
+              .input__wrapper-autocomplete
+                input#country(type="text" data-id name="country" placeholder="Вевдите название страны", autocomplete="off")
+                ul#complete(style="display:none")
+                  li
+                    a.select-city__link(data-id="1") Москва
+                  li
+                    a.select-city__link(data-id="2") Минск
+                  li
+                    a.select-city__link(data-id="3") Ижевск
             h2 Количество участников с инвалидностью
-            fieldset.form__flex-space
-              label
-                strong Инвалиды-колясочники
-                span.form_explanation  (передвигающиеся только на инвалидных колясках)
-              input.input__small(type="text")
-            fieldset.form__flex-space
-              label
-                strong Инвалиды-колясочники
-                span.form_explanation (использующие при передвижении различные опорные приспособления)
-              input.input__small(type="text")
-            fieldset.form__flex-space
-              label
-                strong Инвалиды-опорники, использующие при передвижении только опору
-                span.form_explanation (трость, костыли, ходунки)
-              input.input__small(type="text")
-            fieldset.form__flex-space
-              label
-                strong Инвалиды по зрению
-                span.form_explanation (слепые)
-              input.input__small(type="text")
-            fieldset.form__flex-space
-              label
-                strong Инвалиды по зрению
-                span.form_explanation (слабовидящие)
-              input.input__small(type="text")
-            fieldset.form__flex-space
-              label
-                strong Инвалиды по слуху
-                span.form_explanation (глухие и слабослышащие)
-              input.input__small(type="text")
-            fieldset.form__flex-space
-              label
-                strong Инвалиды вследствие психических заболеваний
-              input.input__small(type="text")
-            fieldset.form__flex-space
-              label
-                strong Иные группы инвалидности
-              input.input__small(type="text")
-            fieldset.form__flex-space
-              label(for="number")
-                strong Общее количество
-              input.input__small(type="text" name="number" id="number")
+            fieldset
+              .form__flex-space
+                label
+                  strong Инвалиды-колясочники
+                  span.form_explanation  (передвигающиеся только на инвалидных колясках)
+                input.input__small(type="text")
+            fieldset
+              .form__flex-space
+                label
+                  strong Инвалиды-колясочники
+                  span.form_explanation (использующие при передвижении различные опорные приспособления)
+                input.input__small(type="text")
+            fieldset
+              .form__flex-space
+                label
+                  strong Инвалиды-опорники, использующие при передвижении только опору
+                  span.form_explanation (трость, костыли, ходунки)
+                input.input__small(type="text")
+            fieldset
+              .form__flex-space
+                label
+                  strong Инвалиды по зрению
+                  span.form_explanation (слепые)
+                input.input__small(type="text")
+            fieldset
+              .form__flex-space
+                label
+                  strong Инвалиды по зрению
+                  span.form_explanation (слабовидящие)
+                input.input__small(type="text")
+            fieldset
+              .form__flex-space
+                label
+                  strong Инвалиды по слуху
+                  span.form_explanation (глухие и слабослышащие)
+                input.input__small(type="text")
+            fieldset
+              .form__flex-space
+                label
+                  strong Инвалиды вследствие психических заболеваний
+                input.input__small(type="text")
+            fieldset
+              .form__flex-space
+                label
+                  strong Иные группы инвалидности
+                input.input__small(type="text")
+            fieldset
+              .form__flex-space
+                label(for="number")
+                  strong Общее количество
+                input.input__small(type="text" name="number" id="number")
             .form__flex
               h2 Члены дилегации
               a(href="delegation.html").add Добавить
