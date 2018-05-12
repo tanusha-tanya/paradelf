@@ -29,9 +29,6 @@ $( document ).ready(function(){
         nav:false,
         autoplayHoverPause:true
     });
-
-    $('.js-autosave-form').sisyphus({timeout: 5});
-
     $('.map__list').customScroll({
         vertical:  true,
         horizontal: false
@@ -72,66 +69,118 @@ $( document ).ready(function(){
         this.labels[0].innerHTML = fileName;
      })
 
-    var complete = function() {
-        $("#complete").slideDown();
-        $("#complete").find("a").on("click", function(){
-            var selectCountry = $(this).text();
-            var data = $(this).attr('data-id');
-            $("#country").val(selectCountry);
-            $("#country").attr('data-id', data);
-            $("#complete").slideUp();
-        })
-    }
-    $(document).click(function(event){
-        if (!$(event.target).closest(".input__wrapper-autocomplete").length){
-            $("#complete").slideUp();
-        }
-    });
-    var passwordIcon =  $(".form__password").find('svg');
-    $(passwordIcon).click(function(){
-      var password = $(this).parent(".form__password").find("input");
+        var passwordIcon =  $(".form__password").find('svg');
+        $(passwordIcon).click(function(){
+          var password = $(this).parent(".form__password").find("input");
 
-        if (password[0].type === "password"){
-            $(this).children("use").attr("xlink:href", "#hide")
-            password[0].type = "text";
-        }
-        else{
-            $(this).children("use").attr("xlink:href", "#show")
-            password[0].type = "password";
-        }
-    })
-
-    $("#country").on("input", function(){
-        var word = this.value.toLowerCase();
-        var container = this.container = document.querySelector('.input__wrapper-autocomplete');
-        var links = container.querySelectorAll('.select-city__link');
-        complete();
-        $(links).parent("li").removeClass("selected");
-        var currentCountry;
-
-        for (var i = 0; i < links.length; i++){
-          for (var j = 0; j < links[i].innerHTML.length; j++){
-            if (word.charAt(j) === links[i].innerHTML.toLowerCase().charAt(j))
-            {
-              currentCountry = links[i];
-              console.log(word.charAt(j) + links[i].innerHTML.toLowerCase().charAt(j));
+            if (password[0].type === "password"){
+                $(this).children("use").attr("xlink:href", "#hide")
+                password[0].type = "text";
             }
             else{
-              currentCountry = undefined
+                $(this).children("use").attr("xlink:href", "#show")
+                password[0].type = "password";
             }
-              $(currentCountry).parent("li").addClass("selected")
-          }
+        })
 
-      }
-        /*var key =  links[1].innerHTML.charAt(0);
-        key += links[1].innerHTML.charAt(1);
-        console.log(key);
-        complete();*/
+        $(".country").on("input", function(){
+            var container = $(this).parent('.input__wrapper-autocomplete');
+            var links = $(container).find('.select-city__link');
+            var hiddenInput = $(container).find('input:hidden');
+            if(this.value.length > 0) {
+                var word = this.value.toLowerCase();
+                complete();
+                $(links).parent("li").removeClass("selected");
+                var currentCountry;
+                for (var i = 0; i < links.length; i++){
+                    if (links[i].innerText.toLowerCase().indexOf(word) == 0){
+                        currentCountry = links[i];
+                        if (links[i].innerText.toLowerCase().trim() === word.trim()){
+                            var dataLink = $(links[i]).attr('data-id');
+                            $(hiddenInput).attr('value', dataLink);
+                            $(".complete").slideUp();
+                            if (dataLink === "101"){
+                                $(".subject__fieldset").show();
+                            }
+                        }
+                    }
+                    else{
+                        currentCountry = undefined;
+                        $(hiddenInput).attr('value', '');
+                        if (dataLink !== "101"){
+                            $(".subject__fieldset").hide();
+                      }
+                    }
+                    $(currentCountry).parent("li").addClass("selected")
+                }
+            }
+        else{
+            $(links).parent("li").removeClass("selected");
+            if (dataLink !== "101"){
+               $(".subject__fieldset").hide();
+            }
+        }
     });
 
+    var complete = function() {
+        $(".complete").slideDown();
+        $(".complete").find("a").on("click", function(){
+            var selectCountry = $(this).text();
+            var data = $(this).attr('data-id');
+            var hiddenInput = $(".country").parent('.input__wrapper-autocomplete').find('input:hidden');
+            $(".country").val(selectCountry);
+            $(hiddenInput).attr('value', data);
+            if (data === "101"){
+                $(".subject__fieldset").show();
+            }
+            $(".complete").slideUp();
+        })
+    };
 
+    var completesubject = function() {
+        $(".completesubject").slideDown();
+        $(".completesubject").find("a").on("click", function(){
+            var selectCountry = $(this).text();
+            var data = $(this).attr('data-id');
+            $(".subject").val(selectCountry);
+            $(".subject").attr('data-id', data);
+            $(".completesubject").slideUp();
+        })
+    };
+
+    $(document).click(function(event){
+        if (!$(event.target).closest(".input__wrapper-autocomplete").length){
+            $(".complete").slideUp();
+        }
+    });
+
+    $(".subject").on("input", function(){
+        var container = $(this).parent('.input__wrapper-autocomplete');
+        var links = $(container).find('.select-city__link');
+        if(this.value.length > 0) {
+            var wordsubject = this.value.toLowerCase();
+            completesubject();
+            $(links).parent("li").removeClass("selected");
+            var currentsubject;
+            for (var i = 0; i < links.length; i++){
+                if (links[i].innerText.toLowerCase().indexOf(wordsubject) == 0){
+                    currentsubject = links[i];
+                    $(currentsubject).parent("li").addClass("selected");
+                    if (links[i].innerText.toLowerCase().trim() === wordsubject.trim()){
+                        var dataLink = $(links[i]).attr('data-id');
+                        $(".subject").attr('data-id', dataLink);
+                        $(".completesubject").slideUp();
+                        if (links[i].innerText.toLowerCase().trim() === word.trim()){
+                            var dataLink = $(links[i]).attr('data-id');
+                            $(".country").attr('data-id', dataLink);
+                            $(".complete").slideUp();
+                        }
+                    }
+                }
+            }
+        }
+    })
 })
-
 
 document.addEventListener('DOMContentLoaded', function(){
 
