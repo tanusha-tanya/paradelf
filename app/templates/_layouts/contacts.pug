@@ -1,10 +1,11 @@
 include ../_modules/headerinner/headerinner
 include ../_modules/slider/slider
 include ../_modules/date/date
+include ../_modules/date/date
 include ../_modules/button/button
 include ../_modules/contacts/contacts
 include ../_modules/mainmenu/mainmenu
-include ../_modules/slider/slider
+include ../_modules/low_vision/low_vision
 include ../_modules/date/date
 include ../_modules/button/button
 include ../_modules/contacts/contacts
@@ -18,6 +19,7 @@ html.no-js(lang="ru")
     include ../_includes/svg
 
   body
+    +low_vision()
     header.header
       +headerinner()
     block content

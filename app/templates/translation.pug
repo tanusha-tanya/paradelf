@@ -1,0 +1,28 @@
+extends _layouts/detailnomination
+block content
+  section.section-top.purple-top
+    .newsdetail__container
+      a.back_link.back_link-translation(href="nomination.html")
+        svg(role="img" width="32" height="14")
+          use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_back")
+        span Вернуться назад
+      .container-small
+        .translation__title
+          h1 Онлайн-трансляция
+  .container-small
+    .translation__filter
+      ul
+        li
+          a(href="#").translation-link-past Вс, 11
+        li
+          a(href="#").translation-link-past Пн, 12
+        li
+          a(href="#").translation-link-current Сегодня
+        li
+          a(href="#").translation-link-next Ср, 14
+        li
+          a(href="#").translation-link-next Чт, 15
+        li
+          a(href="#").translation-link-next Пт, 16
+        li
+          a(href="#").translation-link-next Сб, 17

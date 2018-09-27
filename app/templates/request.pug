@@ -13,18 +13,22 @@ block content
                 .input__wrapper-autocomplete
                     input#country.country(type="text" name="country" placeholder="Вевдите название страны", autocomplete="off")
                     input(type="hidden" value)
-                    ul.complete(style="display:none")
-                        li
-                            a.select-city__link(data-id="1") Москва
-                        li
-                            a.select-city__link(data-id="2") Минск
-                        li
-                            a.select-city__link(data-id="101") Россия
+                    ul.complete
+                      li
+                        a.select-city__link(data-id="1") Москва
+                      li
+                        a.select-city__link(data-id="2") Минск
+                      li
+                        a.select-city__link(data-id="111") Россия
+                      li
+                        a.select-city__link(data-id="4") Город
+                      li
+                        a.select-city__link(data-id="8") нижний новгород
             fieldset.subject__fieldset
                 label(for="subject") Ваш субъект
                 .input__wrapper-autocomplete
                     input#subject.subject(type="text" name="subject" placeholder="Вевдите название субъекта", autocomplete="off")
-                    inpu(type="hidden" value)
+                    input(type="hidden" value)
                     ul.completesubject(style="display:none")
                         li
                             a.select-city__link(data-id="1") Москва

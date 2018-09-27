@@ -65,10 +65,8 @@ $( document ).ready(function(){
 
     $("#iDOC").on("change", function(){
         var fileName = this.files[0].name;
-        console.log(fileName)
         this.labels[0].innerHTML = fileName;
      })
-
         var passwordIcon =  $(".form__password").find('svg');
         $(passwordIcon).click(function(){
           var password = $(this).parent(".form__password").find("input");
@@ -83,40 +81,49 @@ $( document ).ready(function(){
             }
         })
 
+        var russia = "111"
+        var countItems = 2;
         $(".country").on("input", function(){
             var container = $(this).parent('.input__wrapper-autocomplete');
             var links = $(container).find('.select-city__link');
             var hiddenInput = $(container).find('input:hidden');
+            var hidden = $(".subject").parent('.input__wrapper-autocomplete').find('input:hidden');
             if(this.value.length > 0) {
                 var word = this.value.toLowerCase();
                 complete();
                 $(links).parent("li").removeClass("selected");
+                $(links).parent("li").hide();
                 var currentCountry;
                 for (var i = 0; i < links.length; i++){
-                    if (links[i].innerText.toLowerCase().indexOf(word) == 0){
+                var counter = 0;
+                    if (links[i].innerText.toLowerCase().indexOf(word) >= 0){
                         currentCountry = links[i];
                         if (links[i].innerText.toLowerCase().trim() === word.trim()){
                             var dataLink = $(links[i]).attr('data-id');
                             $(hiddenInput).attr('value', dataLink);
                             $(".complete").slideUp();
-                            if (dataLink === "101"){
+                            if (dataLink === russia){
                                 $(".subject__fieldset").show();
                             }
+
                         }
                     }
                     else{
                         currentCountry = undefined;
                         $(hiddenInput).attr('value', '');
-                        if (dataLink !== "101"){
+                        if (dataLink !== russia){
                             $(".subject__fieldset").hide();
+                            $(hidden).attr('value', "")
                       }
                     }
-                    $(currentCountry).parent("li").addClass("selected")
-                }
+                    $(currentCountry).parent("li").addClass("selected");
+                    showSelected();
+                  }
             }
         else{
             $(links).parent("li").removeClass("selected");
-            if (dataLink !== "101"){
+            $(links).parent("li").hide();
+            if (dataLink !== russia){
                $(".subject__fieldset").hide();
             }
         }
@@ -130,7 +137,7 @@ $( document ).ready(function(){
             var hiddenInput = $(".country").parent('.input__wrapper-autocomplete').find('input:hidden');
             $(".country").val(selectCountry);
             $(hiddenInput).attr('value', data);
-            if (data === "101"){
+            if (data === russia){
                 $(".subject__fieldset").show();
             }
             $(".complete").slideUp();
@@ -139,11 +146,12 @@ $( document ).ready(function(){
 
     var completesubject = function() {
         $(".completesubject").slideDown();
+        var hidden = $(".subject").parent('.input__wrapper-autocomplete').find('input:hidden');
         $(".completesubject").find("a").on("click", function(){
             var selectCountry = $(this).text();
             var data = $(this).attr('data-id');
             $(".subject").val(selectCountry);
-            $(".subject").attr('data-id', data);
+            $(hidden).attr('value', data);
             $(".completesubject").slideUp();
         })
     };
@@ -157,29 +165,49 @@ $( document ).ready(function(){
     $(".subject").on("input", function(){
         var container = $(this).parent('.input__wrapper-autocomplete');
         var links = $(container).find('.select-city__link');
+        var hidden = $(container).find('input:hidden');
         if(this.value.length > 0) {
             var wordsubject = this.value.toLowerCase();
             completesubject();
             $(links).parent("li").removeClass("selected");
+            $(links).parent("li").hide();
             var currentsubject;
             for (var i = 0; i < links.length; i++){
                 if (links[i].innerText.toLowerCase().indexOf(wordsubject) == 0){
                     currentsubject = links[i];
                     $(currentsubject).parent("li").addClass("selected");
+                    showSelected()
                     if (links[i].innerText.toLowerCase().trim() === wordsubject.trim()){
                         var dataLink = $(links[i]).attr('data-id');
                         $(".subject").attr('data-id', dataLink);
+                        $(hidden).attr('value', dataLink);
                         $(".completesubject").slideUp();
-                        if (links[i].innerText.toLowerCase().trim() === word.trim()){
-                            var dataLink = $(links[i]).attr('data-id');
-                            $(".country").attr('data-id', dataLink);
-                            $(".complete").slideUp();
-                        }
                     }
+                    else{
+                        urrentsubject = undefined;
+                        $(hidden).attr('value', '');
                 }
+              }
             }
         }
-    })
+    });
+    var showSelected = function(){
+    for(var j = 0; j < countItems; j++){
+      var showed = $(".complete").find(".selected")[j];
+      $(showed).show();
+    }
+  }
+
+    $(".result__name").on("click", function(){
+        $(this).closest(".result__form").toggleClass("result__form-open")
+    });
+    $('.js-count').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9]/g)) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        }
+    });
+
+
 })
 
 document.addEventListener('DOMContentLoaded', function(){

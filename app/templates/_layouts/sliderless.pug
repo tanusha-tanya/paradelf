@@ -1,4 +1,5 @@
 include ../_modules/headertransless/headertransless
+include ../_modules/low_vision/low_vision
 doctype html
 html.no-js(lang="ru")
   head
@@ -7,6 +8,7 @@ html.no-js(lang="ru")
     include ../_includes/svg
 
   body
+    +low_vision()
     header.header
       +headertransless()
     block content

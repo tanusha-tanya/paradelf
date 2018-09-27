@@ -5,6 +5,7 @@ include ../_modules/date/date
 include ../_modules/button/button
 include ../_modules/contacts/contacts
 include ../_modules/description/description
+include ../_modules/low_vision/low_vision
 
 doctype html
 html.no-js(lang="ru")
@@ -15,6 +16,7 @@ html.no-js(lang="ru")
 
   body
     .topwrapper
+      +low_vision()
       header.header
         +header()
       section.section-top
