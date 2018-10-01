@@ -1,16 +1,15 @@
 extends _layouts/detailnomination
 block content
   section.section-top.purple-top
-    .newsdetail__container
+    .translation__container
       a.back_link.back_link-translation(href="nomination.html")
         svg(role="img" width="32" height="14")
           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_back")
-        span Вернуться назад
-      .container-small
-        .translation__title
-          h1 Онлайн-трансляция
-  .container-small
-    .translation__filter
+          span Вернуться назад
+      .translation__title
+        h1 Онлайн-трансляция
+  .translation__bordered
+    .translation__filter.container-small
       ul.translation__list
         li.translation__li
           a(href="#").translation__link-past Вс, 11
@@ -32,7 +31,7 @@ block content
       .translation__select
         select
           option(disabled) Выберите программу
-          option БУ УР «Дом дружбы народов»      
+          option БУ УР «Дом дружбы народов»
     .translation__video.video__wrap
       iframe(width="560", height="315", src="https://www.youtube.com/embed/UDLpUprnOLc", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
     .translation__videoitems
@@ -62,7 +61,7 @@ block content
         .translation__preview
           iframe(width="248", height="144", src="https://www.youtube.com/embed/UDLpUprnOLc", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
         .translation__description
-          .translation__name Музыкальный фольклор народов России и мира
+          .translation__name Музыкальный фольклор народов&nbsp;России&nbsp;и мира
       .translation__videoitem.translation__videoitem-next
         .translation__time
           time(datetime="14:55") 14:55
@@ -70,4 +69,4 @@ block content
         .translation__preview
           iframe(width="248", height="144", src="https://www.youtube.com/embed/UDLpUprnOLc", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
         .translation__description
-          .translation__name Музыкальный фольклор народов России и мира
+          .translation__name Музыкальный фольклор народов&nbsp;России&nbsp;и мира

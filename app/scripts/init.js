@@ -34,9 +34,9 @@ $( document ).ready(function(){
         horizontal: false
     });
 
-    $('.about__ancors').simpleScrollFollow({
+    $('.about__ancors, .translation__filter').simpleScrollFollow({
         limit_elem: '.about__left'
-    });
+    });    
 
     var menuIsOpen = false;
     var menuContent = $(".hidden__menu").html();
