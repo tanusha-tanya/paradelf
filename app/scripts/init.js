@@ -36,7 +36,7 @@ $( document ).ready(function(){
 
     $('.about__ancors, .translation__filter').simpleScrollFollow({
         limit_elem: '.about__left'
-    });    
+    });
 
     var menuIsOpen = false;
     var menuContent = $(".hidden__menu").html();
@@ -356,6 +356,14 @@ document.addEventListener('DOMContentLoaded', function(){
   setDate();
   window.setInterval(setDate, 60000);//Надо отдельно делать инкремент для счетчика, брать значение 1 раз
 
-
-
+    var videoitem = document.querySelectorAll(".translation__videoitem");
+    if(videoitem){
+      for(var i = 0; i < videoitem.length; i++){
+        videoitem[i].addEventListener("click", function(){
+          if(this.classList.contains("translation__videoitem-close")){
+            this.classList.remove("translation__videoitem-close");
+          }
+        });
+      }
+    }
 });

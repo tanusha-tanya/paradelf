@@ -35,7 +35,8 @@ block content
     .translation__video.video__wrap
       iframe(width="560", height="315", src="https://www.youtube.com/embed/UDLpUprnOLc", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
     .translation__videoitems
-      .translation__videoitem
+      .translation__videoitem.translation__videoitem-close
+        .translation__button
         .translation__time.translation__time-last
           time(datetime="08:20") 08:20
           .translation__format (UTC +4)
@@ -44,7 +45,8 @@ block content
         .translation__description
           .translation__name Вокальное искусство
           .translation__text Сольное и ансамблевое, на народных инструментах
-      .translation__videoitem
+      .translation__videoitem.translation__videoitem-close
+        .translation__button
         .translation__time.translation__time-current
           .translation__sticker Сейчас
           time(datetime="11:30") 11:30
@@ -54,7 +56,8 @@ block content
         .translation__description
           .translation__name Академическое инструментальное исполнение
           .translation__text Сольное и ансамблевое, на народных инструментах
-      .translation__videoitem.translation__videoitem-next
+      .translation__videoitem.translation__videoitem-next.translation__videoitem-close
+        .translation__button
         .translation__time
           time(datetime="13:05") 13:05
           .translation__format (UTC +4)
@@ -62,7 +65,8 @@ block content
           iframe(width="248", height="144", src="https://www.youtube.com/embed/UDLpUprnOLc", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
         .translation__description
           .translation__name Музыкальный фольклор народов&nbsp;России&nbsp;и мира
-      .translation__videoitem.translation__videoitem-next
+      .translation__videoitem.translation__videoitem-next.translation__videoitem-close
+        .translation__button
         .translation__time
           time(datetime="14:55") 14:55
           .translation__format (UTC +4)
