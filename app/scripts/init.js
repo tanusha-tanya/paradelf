@@ -356,14 +356,73 @@ document.addEventListener('DOMContentLoaded', function(){
   setDate();
   window.setInterval(setDate, 60000);//Надо отдельно делать инкремент для счетчика, брать значение 1 раз
 
-    var videoitem = document.querySelectorAll(".translation__videoitem");
+   var videoitem = document.querySelectorAll(".translation__videoitem");
+
+         var tag = document.createElement('script');
+
+         tag.src = "https://www.youtube.com/iframe_api";
+         var firstScriptTag = document.getElementsByTagName('script')[0];
+         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+         var player;
+         function onYouTubeIframeAPIReady() {
+           player = new YT.Player('myplayer', {
+             height: '360',
+             width: '640',
+             videoId: 'M7lc1UVf-VE',
+             events: {
+               'onReady': onPlayerReady,
+               'onStateChange': onPlayerStateChange
+             }
+           });
+         }
+
+
+         function onPlayerReady(event) {
+           event.target.playVideo();
+         }
+
+
+         var done = false;
+         function onPlayerStateChange(event) {
+           if (event.data == YT.PlayerState.PLAYING && !done) {
+             setTimeout(stopVideo, 6000);
+             done = true;
+           }
+         }
+         function stopVideo() {
+           player.stopVideo();
+         }
+
     if(videoitem){
-      for(var i = 0; i < videoitem.length; i++){
-        videoitem[i].addEventListener("click", function(){
-          if(this.classList.contains("translation__videoitem-close")){
-            this.classList.remove("translation__videoitem-close");
-          }
-        });
+
+      function openVideo(){
+        var description = document.querySelectorAll(".translation__description");
+        for(var i = 0; i < description.length; i++){
+          description[i].addEventListener("click", function(){
+            if(this.parentNode.classList.contains("translation__videoitem-close")){
+              for(var j = 0; j < description.length; j++){
+                videoitem[j].classList.add("translation__videoitem-close");
+              }
+              this.parentNode.classList.remove("translation__videoitem-close");
+            }
+            else{
+              this.parentNode.classList.add("translation__videoitem-close");
+            }
+          });
+        }
+      }
+      if(document.body.clientWidth < 768){
+        openVideo()
+      }
+      window.addEventListener("resize", openVideo, false);
+
+      var videoCurrent = document.querySelector(".translation__video")
+      var videos = document.querySelectorAll(".translation__preview iframe");
+      for(var i = 0; i <  videos.length; i++){
+        videos[i].addEventListener("click", function(event){
+          event.preventDefault();
+          console.log(this)
+        })
       }
     }
 });
