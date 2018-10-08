@@ -12,15 +12,13 @@ block content
     .translation__filter.container-small
       ul.translation__list
         li.translation__li
-          a(href="#").translation__link-past Вс, 11
+          a(href="#")(data-date="2016-12-24").translationDate.translation__link-past Вс, 11
         li.translation__li
-          a(href="#").translation__link-past Пн, 12
+          a(href="#")(data-date="2016-12-25").translationDate.translation__link-past Пн, 12
         li.translation__li
-          a(href="#").translation__link-current Сегодня
+          a(href="#")(data-date="2017-11-11").translationDate.translation__link-past Чт, 15
         li.translation__li
-          span.translation__link-next Ср, 14
-        li.translation__li
-          span.translation__link-next Чт, 15
+          a(href="#")(data-date="2016-12-26").translationDate.translation__link-current Сегодня
         li.translation__li
           span.translation__link-next Пт, 16
         li.translation__li
@@ -29,46 +27,9 @@ block content
     .translation__programm
       h2 Программа
       .translation__select
-        select
+        select#translationSelect
           option(disabled) Выберите программу
-          option БУ УР «Дом дружбы народов»
-    .translation__video.video__wrap
-      #myplayer
-    .translation__videoitems
-      .translation__videoitem.translation__videoitem-close
-        .translation__time.translation__time-last
-          time(datetime="08:20") 08:20
-          .translation__format (UTC +4)
-        .translation__preview
-          .video__wrap
-            iframe(src="https://www.youtube.com/embed/UDLpUprnOLc", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
-        .translation__description
-          .translation__name Вокальное искусство
-          .translation__text Сольное и ансамблевое, на народных инструментах
-      .translation__videoitem.translation__videoitem-close
-        .translation__time.translation__time-current
-          .translation__sticker Сейчас
-          time(datetime="11:30") 11:30
-          .translation__format (UTC +4)
-        .translation__preview
-          .video__wrap
-            iframe(src="https://www.youtube.com/embed/UDLpUprnOLc", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
-        .translation__description
-          .translation__name Академическое инструментальное исполнение
-          .translation__text Сольное и ансамблевое, на народных инструментах
-      .translation__videoitem.translation__videoitem-next.translation__videoitem-close
-        .translation__time
-          time(datetime="13:05") 13:05
-          .translation__format (UTC +4)
-        .translation__preview
-          .video__wrap.video__wrap-empty
-        .translation__description
-          .translation__name Музыкальный фольклор народов&nbsp;России&nbsp;и мира
-      .translation__videoitem.translation__videoitem-next.translation__videoitem-close
-        .translation__time
-          time(datetime="14:55") 14:55
-          .translation__format (UTC +4)
-        .translation__preview
-          .video__wrap.video__wrap-empty
-        .translation__description
-          .translation__name Музыкальный фольклор народов&nbsp;России&nbsp;и мира
+          option.defaultOption(data-program="PL3gXAKX3OCdH1IoZb5FLL3RADPrKt9PXI") БУ УР «Дом дружбы народов»
+          option(data-program="PLdpsTLVZ5tOiiX8MMqXPI3oEJe28UzaWq") Другой пункт
+    section#video.translation__video.video__wrap
+    main

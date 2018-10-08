@@ -4082,6 +4082,11 @@
     @media(min-width: 768px){
       margin: 33px 0;
       display: block;
+      background-color: rgba(0, 0, 0, 0.3);
+      background-image: url("/assets/logo.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
   }
   &__videoitems{
@@ -4185,6 +4190,20 @@
     }
     iframe{
       width: 100%;
+      @media(min-width: 768px){
+        display: none;
+      }
+    }
+    img{
+      display: none;
+      @media(min-width: 768px){
+        display: block;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
     }
   }
   &__format{
@@ -4204,6 +4223,7 @@
   &__bordered{
     border-bottom: 1px solid #F7F7F7;
   }
+
 }
 .back_link-translation{
   font-size: 14px;
@@ -4218,6 +4238,16 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+.emptyArticle{
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  color: #F93877;
 }
 
 /*#CecutientWrapper{
