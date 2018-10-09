@@ -1,89 +1,103 @@
 $(document).ready(function () {
-    var translationDate = document.querySelector(".translation__link-current").dataset.date;
-    var key = 'AIzaSyA3uzIV7gyrbnOKLyk3y_SXcIeZ3SoHUoQ';
-    var playlistId = document.querySelector(".defaultOption").dataset.program;
-    var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
-    var message = 'Нет событий в указанную дату'
+    var img = document.querySelectorAll(".videoImg");
+    var article = document.querySelectorAll(".translation__videoitem");
+    var video = document.querySelector('#video');
+    var windowWidth =  window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-    var options = {
-        part: 'snippet',
-        key: key,
-        maxResults: 20,
-        playlistId: playlistId
-    }
+    if(img.length > 0){
 
-    loadVids();
-
-    function loadVids() {
-        $.getJSON(URL, options, function (data) {
-            resultsLoop(data);
-        });
-    }
+    var id = img[img.length-1].dataset.src;
 
     function mainVid(id) {
-        $('#video').html(`
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				`);
+        video.innerHTML ='<iframe width="560" height="315" src="https://www.youtube.com/embed/'
+        +id+'?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
     }
 
-    function resultsLoop(data) {
-        $('#video').empty();
-        $.each(data.items, function (i, item) {
-            var thumb = item.snippet.thumbnails.medium.url;
-            var title = item.snippet.title;
-            var desc = item.snippet.description.substring(0, 100);
-            var vid = item.snippet.resourceId.videoId;
-            var timePublishedAt = item.snippet.publishedAt
-            var timeString = timePublishedAt.split('T');
-            var time = timeString[1].split(':');
-            var utc = Number.parseInt(time[0])
-            utc += 4;
-            var datetime = (utc < 24)?utc+":"+time[1]:utc="0"+(utc-24)+":"+time[1];
-            if(timeString[0] == translationDate){
-              $('main').append(`
-              <article class="translation__videoitem translation__videoitem-close" data-key="${vid}">
-                <div class="translation__time">
-                  <time datetime="${datetime}">${datetime}</time>
-                  <div class="translation__format"> (UTC +4)</div>
-                </div>
-                <img src="${thumb}" alt="" class="thumb">
-                <div class="translation__description">
-                  <div class="translation__name">${title}</div>
-                  <p class="translation__text">${desc}</p>
-                </div>
+    if (windowWidth >= 768){
+      mainVid(id);
+      showBigVideo()
+    }
+    else{
+      openItems();
+    };
 
-              </article>
-            `);
-          }
-          });
-          var article = document.querySelectorAll(".translation__videoitem");
-          if(article.length > 0){
-          var id = article[0].dataset.key;
-          mainVid(id)
+    window.addEventListener('resize', function(){
+      windowWidth =  window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      console.log(windowWidth)
+      if (windowWidth < 768){
+        video.innerHTML ="";
+        openItems();
+      }
+      else{
+        if(video.querySelector('iframe') != undefined){
+          return
         }
         else{
-          console.log($('#video'))
-          $('#video').html('<div class="emptyArticle">'+message+'</div>');
+          closeVideoitems()
+          mainVid(id);
+          showBigVideo();          
         }
-    }
-
-		// CLICK EVENT
-    $('main').on('click', 'article', function () {
-        var id = $(this).attr('data-key');
-        mainVid(id);
+      }
     });
-;
-    var days = $(".translationDate");
-    $(days).click(function(e){
-      e.preventDefault()
-        translationDate = this.dataset.date;
-        $('main').empty();
-        loadVids();
-    })
+  }
 
-    $("#translationSelect").on('click', 'option', function(){
-      options.playlistId = $(this).data('program');
-      $('main').empty();
-      loadVids();
-  });
+  function scrollToElement(theElement) {
+	    var selectedPosX = 0;
+	    var selectedPosY = 0;
+	    while (theElement != null) {
+	        selectedPosX += theElement.offsetLeft;
+	        selectedPosY += theElement.offsetTop;
+	        theElement = theElement.offsetParent;
+	    }
+	    window.scrollTo(selectedPosX,selectedPosY);
+	}
+
+
+
+  function showBigVideo(){
+    for(var i = 0; i < article.length; i++){
+      article[i].addEventListener("click", function(){
+        id = this.querySelector(".videoImg").dataset.src;
+          scrollToElement(video);
+          mainVid(id)
+      })
+    }
+  }
+
+  function closeVideoitems(){
+    for(var i = 0; i < article.length; i++){
+      article[i].classList.add("translation__videoitem-close");
+      if(article[i].querySelector("iframe") !== null){
+        deletVideo(article[i]);
+      }
+    }
+  }
+
+  function openItems(){
+    for(var i = 0; i < article.length; i++){
+      article[i].addEventListener("click", function(){
+          if(this.classList.contains("translation__videoitem-close")){
+            closeVideoitems();
+            this.classList.remove("translation__videoitem-close");
+            showSmallVideo(this);
+          }
+          else{
+            this.classList.add("translation__videoitem-close");
+            deletVideo(this);
+          }
+        })
+      }
+    }
+  function deletVideo(videoitem){
+    id = videoitem.querySelector("iframe").dataset.src;
+    videoWrap = videoitem.querySelector(".video__wrap");
+    videoWrap.innerHTML ='<img class="videoImg" src="https://img.youtube.com/vi/'+id+'/0.jpg" data-src="'+id+'">'
+  }
+  function showSmallVideo(videoitem){
+    id = videoitem.querySelector(".videoImg").dataset.src;
+    videoWrap = videoitem.querySelector(".video__wrap");
+    videoWrap.innerHTML ='<iframe width="560" height="315" src="https://www.youtube.com/embed/'
+    +id+'?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen data-src="'+id+'"></iframe>';
+  }
+
 });

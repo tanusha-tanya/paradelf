@@ -356,23 +356,21 @@ document.addEventListener('DOMContentLoaded', function(){
   setDate();
   window.setInterval(setDate, 60000);//Надо отдельно делать инкремент для счетчика, брать значение 1 раз
 
-    var videoitem = document.querySelectorAll(".translation__videoitem");
-    if(videoitem){
-
-
-        var description = document.querySelectorAll(".translation__description");
-        for(var i = 0; i < description.length; i++){
-          description[i].addEventListener("click", function(){
-            if(this.parentNode.classList.contains("translation__videoitem-close")){
-              for(var j = 0; j < description.length; j++){
-                videoitem[j].classList.add("translation__videoitem-close");
-              }
-              this.parentNode.classList.remove("translation__videoitem-close");
-            }
-            else{
-              this.parentNode.classList.add("translation__videoitem-close");
-            }
-          });
-        }       
+  var spoilerItem = document.querySelectorAll(".spoiler__item-close");
+  if(spoilerItem.length > 0){
+    for(var i = 0; i < spoilerItem.length; i++){
+      spoilerItem[i].addEventListener("click", function(){
+        if(this.classList.contains("spoiler__item-close")){
+          for(var j = 0; j < spoilerItem.length; j++){
+              spoilerItem[j].classList.add("spoiler__item-close");
+          }
+          this.classList.remove("spoiler__item-close")
+        }
+        else{
+          this.classList.add("spoiler__item-close")
+        }
+      })
     }
+  }
+
 });
