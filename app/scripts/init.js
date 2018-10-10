@@ -356,18 +356,19 @@ document.addEventListener('DOMContentLoaded', function(){
   setDate();
   window.setInterval(setDate, 60000);//Надо отдельно делать инкремент для счетчика, брать значение 1 раз
 
-  var spoilerItem = document.querySelectorAll(".spoiler__item-close");
-  if(spoilerItem.length > 0){
-    for(var i = 0; i < spoilerItem.length; i++){
-      spoilerItem[i].addEventListener("click", function(){
-        if(this.classList.contains("spoiler__item-close")){
-          for(var j = 0; j < spoilerItem.length; j++){
-              spoilerItem[j].classList.add("spoiler__item-close");
+  var spoilerButton = document.querySelectorAll(".spoiler__title");
+  if(spoilerButton.length > 0){
+    var spoiler = document.querySelectorAll(".spoiler__item");
+    for(var i = 0; i < spoilerButton.length; i++){
+      spoilerButton[i].addEventListener("click", function(){
+        if(this.parentNode.classList.contains("spoiler__item-close")){
+          for(var j = 0; j < spoiler.length; j++){
+            spoiler[j].classList.add("spoiler__item-close");
           }
-          this.classList.remove("spoiler__item-close")
+          this.parentNode.classList.remove("spoiler__item-close")
         }
         else{
-          this.classList.add("spoiler__item-close")
+          this.parentNode.classList.add("spoiler__item-close")
         }
       })
     }

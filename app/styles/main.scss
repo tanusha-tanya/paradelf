@@ -4252,36 +4252,60 @@
   font-size: 16px;
   font-family: 'gothamproMedium';
   color: #000;
+  @media (min-width: 768px){
+    font-size: 22px;
+  }
 }
 .udmurt__item{
   margin-top: 27px;
+  @media (min-width: 768px){
+    margin-top: 32px;
+  }
   p{
     font-size: 14px;
-    line-height: 26px
+    line-height: 26px;
+    @media (min-width: 768px){
+      font-size: 18px;
+      line-height: 38px;
+    }
   }
   a{
     color: #F93877;
     font-size: 14px;
     text-decoration: underline;
+    @media (min-width: 768px){
+      font-size: 18px;
+    }
   }
   h2{
     font-size: 24px;
     line-height: 35px;
+    @media (min-width: 768px){
+      font-size: 40px;
+    }
+  }
+}
+.udmurt__spoilers{
+  margin-bottom: 32px;
+  @media (min-width: 1280px){
+    margin-bottom: 95px;
   }
 }
 .spoiler__item{
-
+  @media (min-width: 1280px){
+    margin-left: -106px;
+  }
 }
 .spoiler__title{
   font-size: 18px;
   line-height: 25px;
   font-family: 'gothamproMedium';
-  background: #EBFDFF;
   padding: 20px;
   padding-right: 25px;
   cursor: pointer;
   margin: 16px -20px;
   position:relative;
+  transition: background .3s;
   &:before{
     content: "";
     position: absolute;
@@ -4291,9 +4315,15 @@
     border-bottom: 8px solid #F93877;
     z-index: 20;
     transition: transform .3s;
+    @media(min-width: 768px){
+      border-bottom: 14px solid #F93877;
+    }
   }
 }
 .spoiler__item-close{
+  .spoiler__title{
+    background: #EBFDFF;
+  }
   .spoiler__content{
     display: none;
   }
@@ -4303,6 +4333,72 @@
     }
   }
 }
+.spoiler__content{
+  font-size: 14px;
+  line-height: 26px;
+  @media (min-width: 768px){
+    font-size: 18px;
+    line-height: 38px;
+  }
+  img{
+    width: 100%;
+  }
+  @media (min-width: 1280px){
+    padding-left: 106px;
+  }
+}
+.spoiler__title{
+  @media (min-width: 768px){
+    font-size: 24px;
+    line-height: 45px;
+  }
+  @media (min-width: 1280px){
+    padding-left: 126px;
+  }
+}
+.udmurt__flex{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+.udmurt__flexitem{
+  width: calc(50% - 10px);
+  margin: 0 5px;
+}
+.udmurt__figure{
+  margin:0;
+  text-align: center;
+  img{
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+.poster{
+  background: #EBFDFF;
+  margin: 0 -20px;
+  padding: 50px 20px;
+  &__img{
+    margin-top: 8px;
+    background-image: url("/images/noimg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #4849D7;
+    padding-top: 137%;
+    height: 0;
+    position: relative;
+    @media(min-width: 768px){
+      margin: 0;
+      padding-top: 50%;
+      margin-top: 43px;
+    }    
+  }
+  @media (min-width: 1280px){
+    margin-left: -106px;
+    padding-left: 86px;
+  }
+}
+
 /*#CecutientWrapper{
   height: 50px;
   position: relative;
