@@ -8,33 +8,15 @@ block content
           span Вернуться назад
       .translation__title
         h1 Онлайн-трансляция
-  .translation__bordered
-    .translation__filter.container-small
-      ul.translation__list
-        li.translation__li
-          a(href="#").translationDate.translation__link-past Вс, 11
-        li.translation__li
-          a(href="#").translationDate.translation__link-past Пн, 12
-        li.translation__li
-          a(href="#").translationDate.translation__link-past Чт, 15
-        li.translation__li
-          a(href="#").translationDate.translation__link-current Сегодня
-        li.translation__li
-          span.translation__link-next Пт, 16
-        li.translation__li
-          span.translation__link-next Сб, 17
   .translation__videoblock
+    section#video.translation__video.video__wrap
+      iframe(src="https://www.youtube.com/embed/tREya1CkMdQ?autoplay=1", allow="autoplay encrypted-media", allowfullscreen="", width="560", height="315", frameborder="0")
     .translation__programm
       h2 Программа
-      .translation__select
-        select#translationSelect
-          option(disabled) Выберите программу
-          option.defaultOption БУ УР «Дом дружбы народов»
-          option Другой пункт
-    section#video.translation__video.video__wrap
     main.translation__videoitems
       article.translation__videoitem.translation__videoitem-close
         .translation__time.translation__time-last
+          .translation__sticker-gray 24.10.18
           time(datetime="08:20") 08:20
           .translation__format (UTC +4)
         .translation__preview
@@ -43,6 +25,7 @@ block content
         .translation__description
           h4.translation__name Вокальное искусство
           .translation__text Сольное и ансамблевое, на народных инструментах
+          .translation__available Видео доступно
       article.translation__videoitem.translation__videoitem-close
         .translation__time.translation__time-current
           .translation__sticker Сейчас
@@ -54,8 +37,10 @@ block content
         .translation__description
           h4.translation__name Академическое инструментальное исполнение
           .translation__text Сольное и ансамблевое, на народных инструментах
+          .translation__available Видео доступно
       article.translation__videoitem.translation__videoitem-next.translation__videoitem-close
         .translation__time
+          .translation__sticker-gray 24.10.18
           time(datetime="13:05") 13:05
           .translation__format (UTC +4)
         .translation__preview
@@ -64,6 +49,7 @@ block content
           h4.translation__name Музыкальный фольклор народов&nbsp;России&nbsp;и мира
       article.translation__videoitem.translation__videoitem-next.translation__videoitem-close
         .translation__time
+          .translation__sticker-gray 24.10.18
           time(datetime="14:55") 14:55
           .translation__format (UTC +4)
         .translation__preview

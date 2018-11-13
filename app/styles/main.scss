@@ -4110,6 +4110,9 @@
     }
     &-next{
       opacity: 0.5;
+      .translation__description{
+        cursor: auto;
+      }
     }
     &-close{
       .translation__preview, .translation__text{
@@ -4148,6 +4151,8 @@
     width: calc(100% - 83px);
     padding-right: 20px;
     cursor: pointer;
+    padding-right: 0;
+    padding-bottom: 30px;
     @media(min-width: 768px){
       margin-top: -10px;
       padding-right: 0;
@@ -4222,7 +4227,11 @@
   &__bordered{
     border-bottom: 1px solid #F7F7F7;
   }
-
+  &__available{
+    color: #F93877;
+    position: absolute;
+    bottom: 10px;
+  }
 }
 .back_link-translation{
   font-size: 14px;
@@ -4391,7 +4400,7 @@
       margin: 0;
       padding-top: 50%;
       margin-top: 43px;
-    }    
+    }
   }
   @media (min-width: 1280px){
     margin-left: -106px;

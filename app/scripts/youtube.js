@@ -12,30 +12,19 @@ $(document).ready(function () {
         video.innerHTML ='<iframe width="560" height="315" src="https://www.youtube.com/embed/'
         +id+'?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
     }
-
-    if (windowWidth >= 768){
-      mainVid(id);
-      showBigVideo()
-    }
-    else{
-      openItems();
-    };
+    articleClick();
 
     window.addEventListener('resize', function(){
       windowWidth =  window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      console.log(windowWidth)
       if (windowWidth < 768){
         video.innerHTML ="";
-        openItems();
       }
       else{
         if(video.querySelector('iframe') != undefined){
           return
         }
         else{
-          closeVideoitems()
-          mainVid(id);
-          showBigVideo();          
+          closeVideoitems()          
         }
       }
     });
@@ -52,16 +41,10 @@ $(document).ready(function () {
 	    window.scrollTo(selectedPosX,selectedPosY);
 	}
 
-
-
-  function showBigVideo(){
-    for(var i = 0; i < article.length; i++){
-      article[i].addEventListener("click", function(){
-        id = this.querySelector(".videoImg").dataset.src;
-          scrollToElement(video);
-          mainVid(id)
-      })
-    }
+  function showBigVideo(that){
+    id = that.querySelector(".videoImg").dataset.src;
+    scrollToElement(video);
+    mainVid(id);
   }
 
   function closeVideoitems(){
@@ -73,21 +56,30 @@ $(document).ready(function () {
     }
   }
 
-  function openItems(){
+  function articleClick(){
     for(var i = 0; i < article.length; i++){
       article[i].addEventListener("click", function(){
-          if(this.classList.contains("translation__videoitem-close")){
-            closeVideoitems();
-            this.classList.remove("translation__videoitem-close");
-            showSmallVideo(this);
-          }
-          else{
-            this.classList.add("translation__videoitem-close");
-            deletVideo(this);
-          }
-        })
-      }
+        if(windowWidth >= 768){
+          showBigVideo(this)
+        }
+        else{
+          openItems(this)
+        }
+      })
     }
+  }
+
+  function openItems(that){
+    if(that.classList.contains("translation__videoitem-close")){
+      closeVideoitems();
+      that.classList.remove("translation__videoitem-close");
+      showSmallVideo(that);
+    }
+    else{
+      that.classList.add("translation__videoitem-close");
+      deletVideo(that);
+    }
+  }
   function deletVideo(videoitem){
     id = videoitem.querySelector("iframe").dataset.src;
     videoWrap = videoitem.querySelector(".video__wrap");
